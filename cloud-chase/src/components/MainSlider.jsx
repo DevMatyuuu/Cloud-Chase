@@ -28,7 +28,7 @@ function MainSlider() {
         <>
             {sliderImg.map((slide, index) => {
             return (
-            <SwiperSlide key={index} className='flex flex-col sm:flex-row h-full md:p-[0px] sm:p-4 p-4'> 
+            <SwiperSlide key={index}> 
                 <img src={slide.image} className='md:w-full md:max-w-[2000px] sm:max-w-[700px] md:max-h-[600px] md:object-fit md:h-full rounded-xl'/> 
             </SwiperSlide>
             )})}
