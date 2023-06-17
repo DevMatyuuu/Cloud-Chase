@@ -33,7 +33,7 @@ function MainSlider() {
             {sliderImg.map((slide, index) => {
             return (
             <SwiperSlide key={index} > 
-                <img src={slide.image} className='md:w-full lg:w-full  md:max-w-[2000px] sl:max-w-[1000px] sm:max-w-[700px]  lg:max-h-[600px] md:max-h-[600px] sl:max-h-[400px] sl:object-fit sm:object-fit object-fit md:object-fit lg:object-fit h-full sl-w-full sl:mb-16 sl:ml-28 rounded-xl sm:ml-2'/> 
+                <img src={slide.image} className='md:w-full lg:w-full sm:w-full sl:w-full lg:max-w-[2000px] md:max-w-[2000px] sl:max-w-[1000px] sm:max-w-[1000px] max-w-auto lg:max-h-[600px] md:max-h-[600px] sl:max-h-[500px] sm:max-h-[400px] max-h-auto sl:object-fit sm:object-fit object-fit md:object-fit lg:object-fit h-full sl:ml-3 sl-w-full sm:ml-0 md:ml-0 sl:mb-16 rounded-xl'/> 
             </SwiperSlide>
             )})}
         </>

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 function Product({product}) {
   return (
-    <Link to={`/products/${product.id}`}>
+    <Link to={`/product/${product.id}`}>
         <div className='grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[300px] md:max-w-[300px] max-w-[200px] sm:h-[300px] sl:h-[280px] rounded-[8px] overflow-hidden relative group justify-center shadow-xl'>
             {product.attributes.isNew ? (
             <div className='absolute bg-amber-400 text-black text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg'>New</div>
