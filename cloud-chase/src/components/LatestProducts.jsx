@@ -9,7 +9,7 @@ function LatestProducts() {
   return (
     <div className='mb-16'>
       <div className='container mx-auto'>
-        <h2 className='text-xl mb-10 text-center text-white'>LATEST PRODUCTS</h2>
+        <h2 className='lg:text-4xl text-2xl mb-10 text-center text-white font-bold'>LATEST PRODUCTS</h2>
       </div>
       <ProductSlider data={data}/>
       

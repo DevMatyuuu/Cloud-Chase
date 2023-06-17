@@ -27,11 +27,15 @@ function ProductSlider({data}) {
         1440: {
             slidesPerView: 5,
             spaceBetween:30
+        },
+        2559: {
+            slidesPerView: 7    ,
+            spaceBetween:30
         }
     }} pagination={{
         clickable:true,
     }}
-    className='productSlider mx-auto md:pl-0 sm:pl-28 sl:pl-24 pl-24 md:max-w-[1480px] max-w-[1000px] md:pb-10 sm:pb-16 pb-10 justify-center'
+    className='productSlider mx-auto lg:pl-0 md:pl-0 sm:pl-28 sl:pl-24 pl-24 lg:max-w-[1600px] md:max-w-[1480px] max-w-[1000px] md:pb-10 sm:pb-16 pb-10 justify-center'
     
     >
         <>

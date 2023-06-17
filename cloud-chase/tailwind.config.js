@@ -11,7 +11,7 @@ export default {
       
       'md': {'min' : '1440px','max' : '2560px'},
 
-      'lg': {'min' : '2560px'},
+      'lg': {'min' : '2559px'},
 
      
     },
