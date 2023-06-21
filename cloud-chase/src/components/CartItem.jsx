@@ -63,7 +63,7 @@ const totalDiscPrice = discountedPrice * itemQty;
                      <div>₱{totalDiscPrice}<span className='grid absolute md:mt-3 text-slate-300'>Original price: {origPrice}</span></div>
                      ) : (<div>₱{totalPrice}</div>)}
         </div>
-        <div className='md:mr-40'>
+        <div className='md:mr-20'>
             <div className='flex bg-slate-800 rounded-full w-[65px]'>
             <button onClick={handleDecrement} className='w-[27px]'>
                 -
