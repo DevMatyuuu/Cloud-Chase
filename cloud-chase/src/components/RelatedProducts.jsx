@@ -7,7 +7,7 @@ function RelatedProducts({categoryTitle}) {
   return (
     <div>
         <div className='container mx-auto'>
-            <div className='uppercase text-center md:mt-10 md:mb-10 text-white text-xl'>related products</div>
+            <div className='uppercase text-center md:mt-10 md:mb-20 text-white text-2xl'>related products</div>
             <ProductSlider data={data} />
         </div>
     </div>
