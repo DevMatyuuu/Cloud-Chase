@@ -11,6 +11,8 @@ function Qty({ item }) {
     setItemQty(itemQty + 1);
   };
 
+  const totalPrice = item.attributes.price * itemQty;
+
   return (
     <div>
       <div>
@@ -24,9 +26,9 @@ function Qty({ item }) {
           </button>
         </div>
       </div>
+      <p>Total Price: {totalPrice}</p>
     </div>
   );
 }
 
 export default Qty;
-  
