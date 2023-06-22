@@ -20,6 +20,11 @@ const discountedPrice = origPrice - (origPrice * (discPercentage / 100))
 //orig price and quantity
 const [itemQty, setItemQty] = useState(1);
 
+const quantityChange = (e) => {
+  setItemQty(e.target.value);
+};
+
+
 const handleDecrement = () => {
   setItemQty(itemQty - 1);
 };
@@ -28,21 +33,11 @@ const handleIncrement = () => {
   setItemQty(itemQty + 1);
 };
 
+//Normal price items
 const totalPrice = origPrice * itemQty;
-
-//Disc price and quantity
-const [discItemQty, setDiscItemQty] = useState(1);
-
-const handleDecrement2 = () => {
-  setDiscItemQty(discItemQty - 1);
-};
-
-const handleIncrement2 = () => {
-  setDiscItemQty(discItemQty + 1);
-};
-
+//Discounted price items
 const totalDiscPrice = discountedPrice * itemQty;
-
+  
 
 
   return (
@@ -60,16 +55,16 @@ const totalDiscPrice = discountedPrice * itemQty;
     <div className='flex md:gap-10'>
         <div className='text-yellow-500'>
             {item.attributes.isSale ? (
-                     <div>₱{totalDiscPrice}<span className='grid absolute md:mt-3 text-slate-300'>Original price: {origPrice}</span></div>
-                     ) : (<div>₱{totalPrice}</div>)}
+                     <div>₱{totalDiscPrice * item.amount}<span className='grid absolute md:mt-3 text-slate-300'>Original price: {origPrice}</span></div>
+                     ) : (<div>₱{totalPrice * item.amount}</div>)}
         </div>
         <div className='md:mr-20'>
-            <div className='flex bg-slate-800 rounded-full w-[65px]'>
-            <button onClick={handleDecrement} className='w-[27px]'>
+            <div className='flex bg-slate-800 rounded-full w-[70px]'>
+            <button onClick={handleDecrement} className='md:pl-3 w-[27px]'>
                 -
             </button>
-            <div className='w-[15px]'>{itemQty}</div>
-            <button onClick={handleIncrement} className='w-[20px]'>
+            <input type='text' value={itemQty * item.amount} onChange={quantityChange} className='w-[30px] text-center bg-slate-800 text-xs'></input>
+            <button onClick={handleIncrement} className='md:pr-3 w-[35px]'>
                 +
             </button>
             </div>
@@ -78,7 +73,7 @@ const totalDiscPrice = discountedPrice * itemQty;
     </div>
     </div>
      <div className='fixed md:ml-[330px]'>
-            <IoClose onClick={() => deleteFromCart(item.id)} className='fixed hover:scale-110 cursor-pointer text-red-400 h-[23px] w-[20px]'/>
+            <IoClose onClick={() => deleteFromCart(item.id)} className='hover:scale-110 cursor-pointer text-red-400 h-[23px] w-[20px]'/>
     </div>
     </div>
     

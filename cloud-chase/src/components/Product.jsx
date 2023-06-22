@@ -1,6 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import Lottie from 'lottie-react'
+import sale from '../assets/sale.json'
+import { useRef } from 'react'
 
 
 function Product({product}) {
@@ -9,8 +11,14 @@ function Product({product}) {
     const discountedPrice = origPrice - (origPrice * (discPercentage / 100))
 
   return (
+    
     <Link to={`/product/${product.id}`}>
         <div className='grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px] max-w-[200px] sm:h-[300px] sl:h-[280px] h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl'>
+        <div>
+                     {product.attributes.isSale ? (
+                     <Lottie animationData={sale} className='absolute mr-44' />
+                     ) : ('')}
+                     </div>
             {product.attributes.isNew ? (
             <div className='absolute bg-amber-400 text-black text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg'>New</div>
             ) : ('')}
@@ -38,9 +46,7 @@ function Product({product}) {
                      ₱{origPrice}
                  </div>)}
                     </div>
-                     {product.attributes.isSale ? (
-                     <div className='absolute bg-amber-400 text-black text-[10px] font-bold uppercase top-3 left-4  px-2 rounded-lg'>sale</div>
-                     ) : ('')}
+                    
                     
                 </div>
 

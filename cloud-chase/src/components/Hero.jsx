@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
-    <section className='mb-[100px] pt-[50px] sm:pt-0 font-poppins'>
+    <section className='mb-[100px] pt-[35px] sm:pt-0 font-poppins'>
      <div className='container mx-auto md:max-w-[1480px] lg:max-w-[1600px]'>
         <div className='flex flex-col gap-y-[20px] md:flex-row lg:flex-row md:gap-x-[20px]'>
         <div className='flex lg:max-w-[1000px] md:max-w-[1000px] sl:max-w-[1200px] sl:max-h-[500px] sm:max-w-[1000px] max-w-[690px] shadow-xl sl:mb-10'>
