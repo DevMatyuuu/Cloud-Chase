@@ -4,13 +4,16 @@ import { CartContext } from '../context/CartContext'
 import CartItem from './CartItem'
 import Lottie from 'lottie-react'
 import empty from '../assets/empty-cart.json'
+import {Button} from '@material-tailwind/react'
+import {IoArrowForward} from 'react-icons/io5'
 
 
 function Cart() {
-    const {setIsOpen, cart} = useContext(CartContext)
+    const {setIsOpen, cart, total} = useContext(CartContext)
   return (
-    <div className='w-full h-full px-4 shadow-2xl overflow-y-auto overflow-x-hidden'>
-        <div className='flex-row '>
+    <>
+    <div className='w-full md:h-[720px] px-4 shadow-left-2xl rounded-xl overflow-y-auto overflow-x-hidden'>
+        <div className='flex-row'>
             <SlClose onClick={() => setIsOpen(false)} className='flex cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-12 md:ml-96 hover:scale-110 duration-300'/>
         </div>
         <div>
@@ -27,6 +30,25 @@ function Cart() {
             )}
         </div>
     </div>
+    <div>
+      <div>
+        <div>
+            {cart.length >= 1 && (
+                   <div className='flex md:ml-10 md:mt-7 text-xl text-white font-extrabold'>
+                    <div className='uppercase'>total:</div><div className='md:ml-72'>₱{total}</div>
+              </div>
+            )}
+        </div>
+        <div className='flex'>
+          <Button className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16'>Clear cart</Button>
+          <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16'>
+            <span>Checkout</span> <IoArrowForward className='ml-2 mt-[3px]' />
+           
+          </Button>
+        </div>
+      </div>
+    </div>
+    </>
   )
 }
 
