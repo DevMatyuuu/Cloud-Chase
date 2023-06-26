@@ -34,21 +34,21 @@ function CartItem({ item }) {
 const discountedPrice = item.attributes.price - (item.attributes.price * (20 / 100))
 
   return (
-    <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 rounded-xl md:pl-12 bg-slate-700 font-poppins md:max-w-[430px]'>
-      <Link to={`/product/${item.id}`} className='w-[100px] h-[120px]'>
+    <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 sl:ml-11 rounded-xl md:pl-12 sl:gap-5 sl:pl-14 bg-slate-700 font-poppins md:max-w-[430px] sl:max-w-[380px]'>
+      <Link to={`/product/${item.id}`} className='w-[100px] h-[120px] sl:w-[300px]'>
         <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`} />
       </Link>
       <div className='md:ml-5'>
-        <div className='md:mb-2 text-yellow-500 uppercase text-xs font-bold'>
+        <div className='md:mb-2 sl:mb-2 text-yellow-500 uppercase text-xs font-bold'>
           {item.attributes.categories.data[0].attributes.title}
         </div>
-        <div className='md:mb-5'>{item.attributes.title}</div>
+        <div className='md:mb-5 sl:mb-3'>{item.attributes.title}</div>
         <div className='flex md:gap-10'>
           <div className='text-yellow-500'>
-            {item.attributes.isSale ? (<div>₱{discountedPrice}<span className='grid text-slate-300'>₱{item.attributes.price}</span></div>) : (<div>{item.attributes.price}</div>) }
+            {item.attributes.isSale ? (<div>₱{discountedPrice}<span className='grid text-slate-300'>₱{item.attributes.price}</span></div>) : (<div>₱{item.attributes.price}</div>) }
           </div>
           
-          <div className='md:mr-20'>
+          <div className='md:mr-20 sl:ml-5'>
             <div className='flex bg-slate-800 rounded-full w-[70px]'>
               <button onClick={handleDecrement} className='md:pl-3 w-[27px]'>
                 -
@@ -66,8 +66,8 @@ const discountedPrice = item.attributes.price - (item.attributes.price * (20 / 1
           </div>
         </div>
       </div>
-      <div className='md:pr-5'>
-        <IoClose onClick={() => deleteFromCart(item.id)} className='hover:scale-110 cursor-pointer text-red-400 h-[23px] w-[20px]' />
+      <div className='flex md:pr-5  sl:w-80'>
+        <IoClose onClick={() => deleteFromCart(item.id)} className='hover:scale-110 cursor-pointer text-red-400 h-[23px] md:w-[20px] sl:w-[17px]' />
       </div>
     </div>
   );

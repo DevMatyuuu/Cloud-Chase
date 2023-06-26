@@ -64,6 +64,7 @@ const CartProvider = ({children}) => {
       setTotal(total)
     }, [cart])
 
+    //cart increment quantity
     const increment = (itemId) => {
       const updatedCart = cart.map((item) => {
         if (item.id === itemId) {
@@ -79,6 +80,7 @@ const CartProvider = ({children}) => {
       updateTotalPrice(); // Update the total price
     };
     
+    //cart decrement quantity
     const decrement = (itemId) => {
       const updatedCart = cart.map((item) => {
         if (item.id === itemId && item.amount > 1) {
