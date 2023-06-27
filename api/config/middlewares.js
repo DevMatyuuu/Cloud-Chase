@@ -1,4 +1,3 @@
-
 module.exports = {
   settings: {
     cors: {
@@ -7,4 +6,6 @@ module.exports = {
     },
   },
 };
+
+
 
