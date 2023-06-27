@@ -1,20 +1,9 @@
-module.exports = [
-  'strapi::errors',
-  'strapi::security',
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
-];
+
 module.exports = {
   settings: {
     cors: {
       enabled: true,
-      origin: 'https://cloud-chase.vercel.app',
+      origin: 'https://cloud-chase.vercel.app, http://cloud-chase.vercel.app',
     },
   },
 };
