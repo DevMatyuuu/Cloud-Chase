@@ -20,7 +20,7 @@ function Header() {
             <Note/></div>
         <div className='mx-auto'>
             <Link to={`/`}>
-            <img  src={logo} className='flex md:h-28 sl:h-28 sm:h-28 h-28 ml-12 md:ml-[350px] sm:ml-16 sl:ml-48' />
+            <img  src={logo} className='flex md:h-28 sl:h-28 sm:h-28 h-28 ml-12 md:ml-[390px] sm:ml-16 sl:ml-48' />
             </Link>
           </div>
           <div className='flex md:mt-[43px] md:mr-28'><SearchForm /></div>
