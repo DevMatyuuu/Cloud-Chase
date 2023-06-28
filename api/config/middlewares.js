@@ -1,14 +1,11 @@
-module.exports = {
-  settings: {
-    cors: {
-      enabled: true,
-      origin: [
-        'https://cloud-chase.vercel.app',
-        'http://cloud-chase.vercel.app'
-      ],
+module.exports = [
+  {
+    name: 'cors',
+    config: {
+      origin: ['https://cloud-chase.vercel.app', 'http://cloud-chase.vercel.app'],
     },
   },
-};
+];
 
 
 
