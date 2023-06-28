@@ -36,7 +36,7 @@ function ProductDetails() {
       <div className='container mx-auto w-auto bg-gradient-to-b from-gray-900 to-gray-600 md:pb-20 md:mt-10 rounded-2xl max-w-[1300px] sl:max-w-[800px] sl:pb-20 md:mb-20'>
         <div className='md:flex flex-row text-center md:gap-10 md:ml-32'>
           <div>
-            <img src={`http://localhost:1337${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-20 md:ml-28 sl:pt-10 max-h-60 mx-auto mt-0'/>
+            <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-20 md:ml-28 sl:pt-10 max-h-60 mx-auto mt-0'/>
           </div>
           <div className='mt-3 font-semibold md:mt-20 md:text-start'>
             <div className='text-yellow-500 uppercase text-sm md:text-md md:mb-4 sl:mb-3 '>{data[0].attributes.categories.data[0].attributes.title}</div>
