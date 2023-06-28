@@ -36,7 +36,7 @@ const discountedPrice = item.attributes.price - (item.attributes.price * (20 / 1
   return (
     <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 sl:ml-11 rounded-xl md:pl-12 sl:gap-5 sl:pl-14 bg-slate-700 font-poppins md:max-w-[430px] sl:max-w-[380px]'>
       <Link to={`/product/${item.id}`} className='w-[100px] h-[120px] sl:w-[300px]'>
-        <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`} />
+        <img src={`https://cloud-chase-be-production-e564.up.railway.app${item.attributes.image.data.attributes.url}`} />
       </Link>
       <div className='md:ml-5'>
         <div className='md:mb-2 sl:mb-2 text-yellow-500 uppercase text-xs font-bold'>
