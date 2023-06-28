@@ -24,7 +24,7 @@ function Hero() {
             </div>
             
             <div className='grad flex-1 h-[250px] rounded-xl overflow-hidden relative p-6 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white z-21 shadow-xl cursor-pointer'> 
-            <Link to={`https://cloud-chase.vercel.app/products/1`}>
+            <Link to={`https://cloud-chase.vercel.app/products/2`}>
               <div className='flex flex-col hover:duration-300 hover:scale-105 md:ml-3'>
                  <p className='text-2xl uppercase font-bold max-w-[300px] md:mb-10 sl:mb-8 mb-8 md:mt-12 md:ml-2 '>20% off for New disposables</p>
                  <p className='text-sm font-bold max-w-[100px] text-black px-2 py-2 bg-yellow-500 rounded-xl text-center uppercase md:ml-1'>shop now</p>
