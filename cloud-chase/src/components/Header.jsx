@@ -1,44 +1,49 @@
-import React from 'react'
-import logo from '../assets/logo.png'
-import CategoryNav from './CategoryNav'
-import { Link } from 'react-router-dom'
-import {SlBag} from 'react-icons/sl'
-import Cart from './Cart'
-import {CartContext} from '../context/CartContext'
-import { useContext } from 'react'
-import SearchForm from './SearchForm'
-import Note from './Note'
-
+import React from 'react';
+import logo from '../assets/logo.png';
+import CategoryNav from './CategoryNav';
+import { Link } from 'react-router-dom';
+import { SlBag } from 'react-icons/sl';
+import Cart from './Cart';
+import { CartContext } from '../context/CartContext';
+import { useContext } from 'react';
+import SearchForm from './SearchForm';
+import Note from './Note';
 
 function Header() {
-  const {isOpen, setIsOpen, itemsAmount} = useContext(CartContext)
+  const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   return (
     <>
-    <header>
-      <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 md:pb-0 sl:pb-0 lg:pb-0 sm:pb-0 pb-8'>
-        <div  className='absolute md:relative md:mt-12 md:ml-[80px] sl:ml-[117px] sl:mt-14 text-white'>
-            <Note/></div>
-        <div className='mx-auto'>
+      <header>
+        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-12 justify-center items-center gap-28 '>
+          <div className='ml-48 mr-5'>
             <Link to={`/`}>
-            <img  src={logo} className='md:relative flex md:h-28 sl:h-28 sm:h-28 h-20 ml-[60px] md:ml-[450px] sm:ml-16 sl:ml-48 md:mt-0 sl:mt-0 sm:mt-0 lg:mt-0 mt-4 ' />
+              <img
+                src={logo}
+                className='h-20 md:h-20'
+              />
             </Link>
           </div>
-          <div className='absolute md:relative md:flex grid justify-center md:mt-[43px] md:mr-28 mr-0'><SearchForm /></div>
-        <div onClick={() => setIsOpen(!isOpen)} className='flex jusitfy-end'>
-            <SlBag className='relative hover:scale-110 hover:duration-300 cursor-pointer h-28 w-8 md:right-20 right-10 sl:right-10 text-white'/>
-           <div className='bg-yellow-500 text-black font-[8px] absolute w-[20px] h-[22px] rounded-full md:top-16 md:right-20 sl:top-16 sl:right-10 top-14 right-9 flex justify-center items-center tracking-[0em]'>
-                 {itemsAmount}
+          <div className='absolute md:mt-10 mr-9'>
+            <SearchForm />
+          </div>
+          <div onClick={() => setIsOpen(!isOpen)} className='flex justify-end'>
+            <SlBag className='relative hover:scale-110 hover:duration-300 cursor-pointer h-28 w-8 md:right-20 right-8 sl:right-10 text-white md:ml-28' />
+            <div className='absolute mr-8'>
+            <div className='bg-yellow-500 text-black font-[8px] w-[20px] h-[22px] rounded-full md:top-16 md:right-20 sl:top-16 sl:right-10 mt-16 flex justify-center items-center tracking-[0em]'>
+              {itemsAmount}
             </div>
+            </div>
+          </div>
+          <div
+            className={`${isOpen ? 'right-0' : '-right-full'}  bg-gradient-to-b from-gray-900 to-gray-600 rounded-left-2xl shadow-xl fixed top-0 bottom-0 w-full z-10 max-w-[500px] transition-all duration-300`}
+          >
+            <Cart />
+          </div>
         </div>
-        <div className={`${isOpen ? 'right-0' : '-right-full'}  bg-gradient-to-b from-gray-900 to-gray-600 rounded-left-2xl shadow-xl fixed top-0 bottom-0 w-full z-10 max-w-[500px] transition-all duration-300`}>
-          <Cart />
-        </div>
-      </div>
-    </header>
-    <CategoryNav />
-   
+      </header>
+      <CategoryNav />
     </>
-  )
+  );
 }
 
-export default Header
+export default Header;
