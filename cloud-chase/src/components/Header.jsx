@@ -19,7 +19,7 @@ function Header() {
             <Link to={`/`}>
               <img
                 src={logo}
-                className='h-20 w-20 md:h-20 ml-4'
+                className='h-20 w-20 md:h-20'
               />
             </Link>
           </div>
