@@ -20,13 +20,13 @@ function Header() {
             <Note/></div>
         <div className='mx-auto'>
             <Link to={`/`}>
-            <img  src={logo} className='absolute md:relative flex md:h-28 sl:h-28 sm:h-28 h-20 ml-[160px] md:ml-[390px] sm:ml-16 sl:ml-48 md:mt-0 sl:mt-0 sm:mt-0 lg:mt-0 mt-5 ' />
+            <img  src={logo} className='md:relative flex md:h-28 sl:h-28 sm:h-28 h-20 ml-[60px] md:ml-[450px] sm:ml-16 sl:ml-48 md:mt-0 sl:mt-0 sm:mt-0 lg:mt-0 mt-4 ' />
             </Link>
           </div>
-          <div className='md:flex grid justify-center md:mt-[43px] md:mr-28 mr-5'><SearchForm /></div>
+          <div className='absolute md:relative md:flex grid justify-center md:mt-[43px] md:mr-28 mr-0'><SearchForm /></div>
         <div onClick={() => setIsOpen(!isOpen)} className='flex jusitfy-end'>
             <SlBag className='relative hover:scale-110 hover:duration-300 cursor-pointer h-28 w-8 md:right-20 right-10 sl:right-10 text-white'/>
-           <div className='bg-yellow-500 text-black font-[8px] absolute w-[20px] h-[22px] rounded-full md:top-16 md:right-20 sl:top-16 sl:right-10  flex justify-center items-center tracking-[0em]'>
+           <div className='bg-yellow-500 text-black font-[8px] absolute w-[20px] h-[22px] rounded-full md:top-16 md:right-20 sl:top-16 sl:right-10 top-14 right-9 flex justify-center items-center tracking-[0em]'>
                  {itemsAmount}
             </div>
         </div>
