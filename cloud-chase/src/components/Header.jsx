@@ -15,15 +15,15 @@ function Header() {
     <>
       <header>
         <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-12 justify-center items-center gap-28 '>
-          <div className='ml-48 mr-5'>
+          <div className='ml-36'>
             <Link to={`/`}>
               <img
                 src={logo}
-                className='h-20 w-20 md:h-20'
+                className='h-20 w-20 md:h-20 ml-4'
               />
             </Link>
           </div>
-          <div className='absolute md:mt-10 mr-9'>
+          <div className='absolute md:mt-10 ml-1'>
             <SearchForm />
           </div>
           <div onClick={() => setIsOpen(!isOpen)} className='flex justify-end'>
