@@ -26,7 +26,7 @@ function Products({ product }) {
             transition={{ duration: 0.5 }}
           >
           </motion.div>
-          <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 ml-3 gap-3 mt-10'>
+          <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
             {data?.map((product) => (
               <motion.div
                 key={product.id}
