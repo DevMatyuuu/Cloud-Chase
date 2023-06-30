@@ -35,7 +35,7 @@ function ProductDetails() {
     <div className='md:mb-16  pt-7 sm:pt-[30px] sl:pt-8 md:mt-16 md:pt-0 font-poppins'>
       <div className='container mx-auto w-auto bg-gradient-to-b from-gray-900 to-gray-600 md:pb-20 md:mt-10 rounded-2xl md:max-w-[1100px] max-w-[1300px] sl:max-w-[800px] sl:pb-20 md:mb-20 mb-12 pt-0  pb-20'>
        <div className='md:flex flex text-center md:gap-10 md:ml-32=0 md:w-auto md:h-auto w-32 md:pt-0 sl:pt-0 pt-10 mx-auto justify-center items-center'>
-  <div className='md:relative absolute flex md:w-auto mx-auto md:mx-0 w-40 md:top-0 top-80 h-80'>
+  <div className='md:relative absolute flex md:w-auto mx-auto md:mx-0 w-40 md:top-0 top-80 md:h-80'>
     <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
   </div>
   <div className='mt-44 font-semibold md:mt-20 md:text-start'>
