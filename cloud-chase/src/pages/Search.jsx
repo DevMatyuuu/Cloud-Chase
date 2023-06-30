@@ -23,7 +23,7 @@ function Search() {
               </div>
             ))
           ) : (
-            <span className="text-white mx-auto md:font-bold md:text-2xl md:mt-20 md:pb-16">No results found.</span>
+            <span className="text-white mx-auto md:font-bold md:text-2xl text-md mt-10 ml-10 md:mt-20 md:pb-16">No results found.</span>
           )}
         </div>
       </div>
