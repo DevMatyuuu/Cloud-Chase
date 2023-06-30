@@ -14,22 +14,22 @@ function Header() {
   return (
     <>
       <header>
-        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-12 justify-center items-center gap-32 '>
-          <div className='ml-40'>
+        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-5 md:pb-0 justify-center items-center gap-32 md:gap-[600px] '>
+          <div className='ml-40 md:ml-[750px] md:mt-5'>
             <Link to={`/`}>
               <img
                 src={logo}
-                className='h-20 w-28 md:h-20'
+                className='h-20 w-28 md:h-32 md:w-32'
               />
             </Link>
           </div>
-          <div className='absolute md:mt-10 ml-1'>
+          <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-24'>
             <SearchForm />
           </div>
-          <div onClick={() => setIsOpen(!isOpen)} className='flex justify-end'>
-            <SlBag className='relative hover:scale-110 hover:duration-300 cursor-pointer h-28 w-8 md:right-20 right-8 sl:right-10 text-white md:ml-28' />
-            <div className='absolute mr-8'>
-            <div className='bg-yellow-500 text-black font-[8px] w-[20px] h-[22px] rounded-full md:top-16 md:right-20 sl:top-16 sl:right-10 mt-16 flex justify-center items-center tracking-[0em]'>
+          <div className='flex justify-end md:mt-4'>
+            <SlBag  onClick={() => setIsOpen(!isOpen)}  className='relative cursor-pointer h-28 w-8 md:right-20 sl:right-10 text-white md:ml-28' />
+            <div className='absolute md:mr-20 md:mt-16 '>
+            <div onClick={() => setIsOpen(!isOpen)} className='bg-yellow-500 text-black font-[8px] w-[20px] h-[20px] rounded-full md:mt-0 md:mr-0 sl:top-16 sl:right-10 mt-[64px] flex justify-center items-center tracking-[0em] cursor-pointer'>
               {itemsAmount}
             </div>
             </div>

@@ -33,16 +33,16 @@ function ProductDetails() {
   
   return (
     <div className='md:mb-16  pt-7 sm:pt-[30px] sl:pt-8 md:mt-16 md:pt-0 font-poppins'>
-      <div className='container mx-auto w-auto bg-gradient-to-b from-gray-900 to-gray-600 md:pb-20 md:mt-10 rounded-2xl max-w-[1300px] sl:max-w-[800px] sl:pb-20 md:mb-20 mb-12  pt-0  pb-20'>
-       <div className='md:flex flex text-center md:gap-10 md:ml-32 md:w-auto md:h-auto w-32 md:pt-0 sl:pt-0 pt-10 mx-auto justify-center items-center'>
-  <div className='absolute flex w-40 mx-auto top-80 h-28'>
-    <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-20 md:ml-28 sl:pt-10 max-h-60 mx-auto ' />
+      <div className='container mx-auto w-auto bg-gradient-to-b from-gray-900 to-gray-600 md:pb-20 md:mt-10 rounded-2xl md:max-w-[1100px] max-w-[1300px] sl:max-w-[800px] sl:pb-20 md:mb-20 mb-12 pt-0  pb-20'>
+       <div className='md:flex flex text-center md:gap-10 md:ml-32=0 md:w-auto md:h-auto w-32 md:pt-0 sl:pt-0 pt-10 mx-auto justify-center items-center'>
+  <div className='md:relative absolute flex md:w-auto mx-auto md:mx-0 w-40 md:top-0 top-80 h-80'>
+    <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
   </div>
   <div className='mt-44 font-semibold md:mt-20 md:text-start'>
-    <div className='text-yellow-500 uppercase text-xs md:text-md md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>
+    <div className='text-yellow-500 uppercase text-xs md:text-[14px] md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>
     <h2 className='text-white text-sm md:text-2xl md:mb-3 md:mt-2 sl:mb-5'>{data[0].attributes.title}</h2>
     <div className='text-white md:text-[16px] mt-2 font-normal md:max-w-[500px] max-w-[500px] md:w-auto sl:w-auto w-[360px] text-[11px] md:text-start sl:text-center sl:ml-12 sl:max-w-[700px] text-center md:mb-8 '>{data[0].attributes.description}</div>
-    <div className='flex sl:gap-5 sl:mt-5 mt-5 ml-24'>
+    <div className='flex sl:gap-5 sl:mt-5 mt-5 ml-24 md:ml-0'>
       <div className='text-yellow-300 md:ml-1 md:mt-3 sl:ml-80 sl:mt-4 mt-4'>{data[0].attributes.isSale ? (
         <div className='text-yellow-500'>Now: ₱{discountedPrice}<span className='grid text-slate-300'> Before: ₱{origPrice}</span></div>
       ) : (

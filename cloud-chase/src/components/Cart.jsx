@@ -13,20 +13,16 @@ function Cart() {
 
   return (
     <>
-      <div
-        className={`w-full md:h-[720px] sl:h-[650px] h-[530px] max-h-full px-4 shadow-left-2xl rounded-xl ${
-          isCartEmpty ? 'overflow-hidden' : 'overflow-y-auto'
-        }`}
-      >
+      <div className={`w-full md:h-[720px] sl:h-[650px] ${isCartEmpty ? 'h-[530px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
-            className='flex  sl:ml-[400px] cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-12 md:ml-96 sl:mt-10 mt-10 hover:scale-110 duration-300'
+            className='flex sl:ml-[400px] cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-12 md:ml-96 sl:mt-10 mt-10 hover:scale-110 duration-300'
           />
         </div>
         <div>
           {isCartEmpty ? (
-            <div className='text-white text-2xl uppercase text-center md:pt-72 sl:pt-[300px] pt-40 overflow-hidden'>
+            <div className='text-white text-2xl uppercase text-center md:pt-48 sl:pt-[300px] pt-40 overflow-hidden'>
               <Lottie
                 animationData={empty}
                 className='flex md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] mx-auto sl:top-[230px] lg:top-[230px] h-40 w-40 overflow-y-hidden'
@@ -37,7 +33,7 @@ function Cart() {
               </span>
             </div>
           ) : (
-            <div className='text-white md:mt-0 sl:mt-0 mt-10  overflow-y-auto overflow-x-hidden'>
+            <div className='text-white md:mt-0 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
               {cart.map((item) => (
                 <div key={item.id}>
                   <CartItem item={item} />
@@ -50,7 +46,7 @@ function Cart() {
       {cart.length >= 1 && (
         <div>
           <div>
-            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 h-full sl:mt-10 mt-8 text-xl text-white font-extrabold'>
+            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-8 text-xl text-white font-extrabold'>
               <div className='uppercase'>total:</div>
               <div className='md:ml-72 sl:ml-[224px] ml-44'>₱{total}</div>
             </div>
