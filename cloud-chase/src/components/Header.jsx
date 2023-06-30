@@ -23,7 +23,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-28 '>
+          <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-32 '>
             <SearchForm />
           </div>
           <div  onClick={() => setIsOpen(!isOpen)}  className='flex justify-end md:mt-4'>
