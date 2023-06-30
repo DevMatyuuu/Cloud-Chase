@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       <header>
-        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-12 justify-center items-center gap-36 '>
+        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-12 justify-center items-center gap-32 '>
           <div className='ml-40'>
             <Link to={`/`}>
               <img
