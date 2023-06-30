@@ -33,7 +33,7 @@ function Cart() {
               </span>
             </div>
           ) : (
-            <div className='text-white md:h-[560px] sl:h-560px] h-[460px] md:mt-0 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
+            <div className='text-white md:h-[560px] sl:h-560px] h-[500px] md:mt-0 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
               {cart.map((item) => (
                 <div key={item.id}>
                   <CartItem item={item} />
