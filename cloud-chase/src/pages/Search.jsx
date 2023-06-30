@@ -15,7 +15,7 @@ function Search() {
         <span className="uppercase text-white font-bold text-3xl">
           Result for: "{searchTerm}"
         </span>
-        <div className='grid md:grid-cols-4 md:gap-10 grid-cols-2 md:mt-14 gap-7 gap-x-0'>
+        <div className='grid md:grid-cols-4 md:gap-10 grid-cols-2 md:mt-14 gap-7 gap-x-0 w-100'>
           {data && data.length > 0 ? (
             data.map((product) => (
               <div className="w-[300px]" key={product.id}>
