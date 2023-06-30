@@ -12,10 +12,10 @@ function Search() {
   return (
     <div>
       <div className="container md:mx-auto md:mt-16 md:pb-16">
-        <span className="uppercase text-white font-bold md:text-3xl text-md md:mt-0 md:ml-0 mt-10 ml-10">
+        <span className="uppercase text-white font-bold md:text-3xl text-md md:mt-0 md:ml-0 mt-20 ml-10">
           Result for: "{searchTerm}"
         </span>
-        <div className='grid md:grid-cols-4 md:gap-10 grid-cols-2 md:mt-14 gap-7 gap-x-0 w-100'>
+        <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
           {data && data.length > 0 ? (
             data.map((product) => (
               <div className="w-[300px]" key={product.id}>
