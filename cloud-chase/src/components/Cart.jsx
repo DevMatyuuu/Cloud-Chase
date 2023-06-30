@@ -18,7 +18,7 @@ function Cart() {
         </div>
         <div>
         {cart.length === 0 ? (
-            <div className='text-white text-2xl uppercase text-center md:pt-72 sl:pt-[300px] pt-72'><Lottie animationData={empty} className='absolute md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] left-[135px] sl:top-[230px] lg:top-[230px] top-[220px] h-40 w-40'/>cart is empty<span className='grid text-xs md:mt-5 sl:mt-5 mt-4'>You can check our products and click add to cart, Thank you!</span></div>
+            <div className='text-white text-2xl uppercase text-center md:pt-72 sl:pt-[300px] pt-72'><Lottie animationData={empty} className='absolute md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] left-[130px] sl:top-[230px] lg:top-[230px] top-[220px] h-40 w-40'/>cart is empty<span className='grid text-xs md:mt-5 sl:mt-5 mt-4'>You can check our products and click add to cart, Thank you!</span></div>
             ) : (
             <div className="text-white md:mt-0 sl:mt-0 mt-10">
                 {cart.map((item) => (
