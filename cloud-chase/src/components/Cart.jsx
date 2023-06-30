@@ -50,7 +50,7 @@ function Cart() {
       {cart.length >= 1 && (
         <div>
           <div>
-            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-8 text-xl text-white font-extrabold'>
+            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 h-full sl:mt-10 mt-8 text-xl text-white font-extrabold'>
               <div className='uppercase'>total:</div>
               <div className='md:ml-72 sl:ml-[224px] ml-44'>₱{total}</div>
             </div>
