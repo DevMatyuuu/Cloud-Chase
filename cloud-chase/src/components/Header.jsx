@@ -14,12 +14,12 @@ function Header() {
   return (
     <>
       <header>
-        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-10 md:pb-0 justify-center items-center gap-24 md:gap-[600px] '>
-          <div className='ml-28 md:ml-[750px] md:mt-5'>
+        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-10 md:pb-0 justify-center items-center gap-20 md:gap-[600px] '>
+          <div className='ml-28 md:ml-[800px] md:mt-5'>
             <Link to={`/`}>
               <img
                 src={logo}
-                className='h-20 w-28 md:h-32 md:w-32'
+                className='h-20 w-24 md:h-32 md:w-32'
               />
             </Link>
           </div>
