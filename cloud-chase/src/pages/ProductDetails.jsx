@@ -38,7 +38,7 @@ function ProductDetails() {
   <div className='md:relative absolute flex md:w-auto mx-auto md:mx-0 w-40 md:top-0 top-80 md:h-80 h-20'>
     <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
   </div>
-  <div className='mt-44 font-semibold md:mt-20 md:text-start'>
+  <div className='mt-60 font-semibold md:mt-20 md:text-start'>
     <div className='text-yellow-500 uppercase text-xs md:text-[14px] md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>
     <h2 className='text-white text-sm md:text-2xl md:mb-3 md:mt-2 sl:mb-5'>{data[0].attributes.title}</h2>
     <div className='text-white md:text-[16px] mt-2 font-normal md:max-w-[500px] max-w-[500px] md:w-auto sl:w-auto w-[360px] text-[11px] md:text-start sl:text-center sl:ml-12 sl:max-w-[700px] text-center md:mb-8 '>{data[0].attributes.description}</div>
