@@ -11,7 +11,7 @@ function Search() {
 
   return (
     <div>
-      <div className="container mx-auto md:mt-16 md:pb-16">
+      <div className="container md:mx-auto md:mt-16 md:pb-16">
         <span className="uppercase text-white font-bold text-3xl">
           Result for: "{searchTerm}"
         </span>
