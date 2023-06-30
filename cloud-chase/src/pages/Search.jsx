@@ -12,7 +12,7 @@ function Search() {
   return (
     <div>
       <div className="container md:mx-auto md:mt-16 md:pb-16">
-        <span className="uppercase text-white font-bold text-3xl">
+        <span className="uppercase text-white font-bold md:text-3xl text-md md:mt-0 md:ml-0 mt-10 ml-10">
           Result for: "{searchTerm}"
         </span>
         <div className='grid md:grid-cols-4 md:gap-10 grid-cols-2 md:mt-14 gap-7 gap-x-0 w-100'>
@@ -23,7 +23,7 @@ function Search() {
               </div>
             ))
           ) : (
-            <span className="text-white mx-auto md:font-bold md:text-2xl text-md mt-10 ml-10 md:mt-20 md:pb-16">No results found.</span>
+            <span className="text-white mx-auto md:font-bold md:text-2xl  md:mt-20 md:pb-16">No results found.</span>
           )}
         </div>
       </div>
