@@ -14,8 +14,8 @@ function Header() {
   return (
     <>
       <header>
-        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-5 md:pb-0 justify-center items-center gap-32 md:gap-[600px] '>
-          <div className='ml-40 md:ml-[750px] md:mt-5'>
+        <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-10 md:pb-0 justify-center items-center gap-24 md:gap-[600px] '>
+          <div className='ml-28 md:ml-[750px] md:mt-5'>
             <Link to={`/`}>
               <img
                 src={logo}
@@ -23,7 +23,7 @@ function Header() {
               />
             </Link>
           </div>
-          <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-24'>
+          <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-28 '>
             <SearchForm />
           </div>
           <div className='flex justify-end md:mt-4'>
