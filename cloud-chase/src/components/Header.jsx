@@ -26,8 +26,8 @@ function Header() {
           <div className='absolute md:realative md:mt-5 ml-1 md:ml-[1000px] mt-28 '>
             <SearchForm />
           </div>
-          <div className='flex justify-end md:mt-4'>
-            <SlBag  onClick={() => setIsOpen(!isOpen)}  className='relative cursor-pointer h-28 w-8 md:right-20 sl:right-10 text-white md:ml-28' />
+          <div  onClick={() => setIsOpen(!isOpen)}  className='flex justify-end md:mt-4'>
+            <SlBag  className='relative cursor-pointer h-28 w-8 md:right-20 sl:right-10 text-white md:ml-28' />
             <div className='absolute md:mr-20 md:mt-16 '>
             <div onClick={() => setIsOpen(!isOpen)} className='bg-yellow-500 text-black font-[8px] w-[20px] h-[20px] rounded-full md:mt-0 md:mr-0 sl:top-16 sl:right-10 mt-[64px] flex justify-center items-center tracking-[0em] cursor-pointer'>
               {itemsAmount}
