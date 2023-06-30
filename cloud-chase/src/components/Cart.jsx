@@ -12,15 +12,15 @@ function Cart() {
     const {setIsOpen, cart, total} = useContext(CartContext)
   return (
     <>
-    <div className='w-full md:h-[720px] sl:h-[650px] h-[650px] px-4 shadow-left-2xl rounded-xl overflow-y-auto overflow-x-hidden'>
+    <div className='w-full md:h-[720px] sl:h-[650px] h-[530px] max-h-full px-4 shadow-left-2xl rounded-xl'>
         <div className='flex-row'>
             <SlClose onClick={() => setIsOpen(false)} className='flex  sl:ml-[400px] cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-12 md:ml-96 sl:mt-10 mt-10 hover:scale-110 duration-300'/>
         </div>
         <div>
         {cart.length === 0 ? (
-            <div className='text-white text-2xl uppercase text-center md:pt-72 sl:pt-[300px] pt-72'><Lottie animationData={empty} className='absolute md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] left-[130px] sl:top-[230px] lg:top-[230px] top-[220px] h-40 w-40'/>cart is empty<span className='grid text-xs md:mt-5 sl:mt-5 mt-4'>You can check our products and click add to cart, Thank you!</span></div>
+            <div className='text-white text-2xl uppercase text-center md:pt-72 sl:pt-[300px] pt-40 overflow-hidden'><Lottie animationData={empty} className='flex md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] mx-auto sl:top-[230px] lg:top-[230px] h-40 w-40 overflow-y-hidden'/>cart is empty<span className='grid text-xs md:mt-5 sl:mt-5 mt-4 overflow-y-hidden'>You can check our products and click add to cart, Thank you!</span></div>
             ) : (
-            <div className="text-white md:mt-0 sl:mt-0 mt-10">
+            <div className="text-white md:mt-0 sl:mt-0 mt-10  overflow-y-auto overflow-x-hidden">
                 {cart.map((item) => (
                 <div>
                     <CartItem item={item} key={item.id} />
