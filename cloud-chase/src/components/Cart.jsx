@@ -44,7 +44,7 @@ function Cart() {
         </div>
       </div>
       {cart.length >= 1 && (
-        <div>
+        <div className='mx-auto'>
           <div>
             <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-0 text-xl text-white font-extrabold'>
               <div className='uppercase'>total:</div>
