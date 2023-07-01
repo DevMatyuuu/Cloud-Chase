@@ -13,7 +13,7 @@ function Cart() {
 
   return (
     <>
-      <div className={`w-full md:h-[650px] sl:h-[650px] h-[700px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
+      <div className={`w-full md:h-[650px] sl:h-[650px] h-[500px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
@@ -46,16 +46,16 @@ function Cart() {
       {cart.length >= 1 && (
         <div>
           <div>
-            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-8 text-xl text-white font-extrabold'>
+            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-0 text-xl text-white font-extrabold'>
               <div className='uppercase'>total:</div>
-              <div className='md:ml-72 sl:ml-[224px] ml-44'>₱{total}</div>
+              <div className='md:ml-72 sl:ml-[224px] ml-40'>₱{total}</div>
             </div>
           </div>
           <div className='flex md:mt-0 sl:mt-0 mt-7'>
             <Button onClick={clearCart}className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
               Clear cart
             </Button>
-            <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-24'>
+            <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-20'>
               <span>Checkout</span> <IoArrowForward className='ml-2 mt-[3px]' />
             </Button>
           </div>
