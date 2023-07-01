@@ -16,7 +16,7 @@ function Products({ product }) {
   }, [data]);
 
   return (
-    <div className='mb-16 pt-0 md:pb-36 sl:mb-60 sm:pt-0 font-poppins'>
+    <div className='mb-16 md:mb-0 pt-0 md:pb-36 sl:mb-60 sm:pt-0 font-poppins'>
       <div className='container mx-auto'>
         <main>
           <motion.div
@@ -26,7 +26,7 @@ function Products({ product }) {
             transition={{ duration: 0.5 }}
           >
           </motion.div>
-          <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
+          <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 gap-y-7 ml-0 mt-10'>
             {data?.map((product) => (
               <motion.div
                 key={product.id}

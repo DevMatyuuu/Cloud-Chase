@@ -3,8 +3,8 @@ import { FaFacebook, FaTwitter, FaDiscord } from 'react-icons/fa';
 
 function Footer() {
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-600 py-10 text-center text-white">
-      <div className="flex justify-center gap-7 mb-6">
+    <div className="bg-gradient-to-b from-gray-900 to-gray-600 py-7 text-center text-white">
+      <div className="flex justify-center gap-7">
         <div>
           <a href=""><FaFacebook /></a>
         </div>
@@ -15,11 +15,11 @@ function Footer() {
           <a href=""><FaDiscord /></a>
         </div>
       </div>
-      <div className="flex justify-center gap-5 mb-5">
+      <div className="flex justify-center gap-5 mb-2 mt-5">
         <div><a href="">About us</a></div>
         <div><a href="">Contact us</a></div>
       </div>
-      <div className="mb-5">Copyright &copy; Cloud Chase 2023. All rights reserved.</div>
+      <div className="">Copyright &copy; Cloud Chase 2023. All rights reserved.</div>
     </div>
   );
 }
