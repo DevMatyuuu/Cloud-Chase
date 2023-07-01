@@ -13,7 +13,7 @@ function Cart() {
 
   return (
     <>
-      <div className={`w-full md:h-[650px] sl:h-[650px] h-auto ${isCartEmpty ? 'h-auto overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
+      <div className={`w-full md:h-[650px] sl:h-[650px] h-[700px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
