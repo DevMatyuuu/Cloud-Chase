@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Lottie from 'lottie-react';
 import { Skeleton } from '@material-ui/lab';
@@ -35,12 +35,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Product({ product }) {
+  const { setIsOpen } = useContext(CartContext);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(true);
   const classes = useStyles();
 
   useEffect(() => {
-    const { setIsOpen } = useContext(CartContext);
     const image = new Image();
     image.src = `https://cloud-chase-be-production-e564.up.railway.app${product.attributes.image.data.attributes.url}`;
     image.onload = () => {
@@ -81,7 +81,7 @@ function Product({ product }) {
             <div className="md:w-full md:h-[180px] sm:w-[full] sm:h-[180px] flex items-center justify-center md:mt-0 sl:mt-5 sm:mt-0 mt-5">
               {imageLoaded ? (
                 <img
-                  onClick={setIsOpen(false)}
+                  onClick={() => setIsOpen(false)}
                   src={`https://cloud-chase-be-production-e564.up.railway.app${product.attributes.image.data.attributes.url}`}
                   className="sm:w-[100px] md:h-[120px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all"
                   alt={product.attributes.title}
