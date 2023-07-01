@@ -8,12 +8,12 @@ import { Button } from '@material-tailwind/react';
 import { IoArrowForward } from 'react-icons/io5';
 
 function Cart() {
-  const { setIsOpen, cart, total } = useContext(CartContext);
+  const { setIsOpen, cart, total, clearCart } = useContext(CartContext);
   const isCartEmpty = cart.length === 0;
 
   return (
     <>
-      <div className={`w-full md:h-[650px] sl:h-[650px] ${isCartEmpty ? 'h-[300pxpx] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
+      <div className={`w-full md:h-[650px] sl:h-[650px] ${isCartEmpty ? 'h-[300px] overflow-y-hidden' : 'h-300px'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
@@ -52,7 +52,7 @@ function Cart() {
             </div>
           </div>
           <div className='flex md:mt-0 sl:mt-0 mt-7'>
-            <Button className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
+            <Button onClick={clearCart}className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
               Clear cart
             </Button>
             <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-24'>

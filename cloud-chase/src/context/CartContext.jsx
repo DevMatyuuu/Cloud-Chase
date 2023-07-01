@@ -103,9 +103,13 @@ const CartProvider = ({children}) => {
       return total;
     };
 
+    const clearCart = () => {
+      setCart([]);
+    }
+
 
   return(
-  <CartContext.Provider value={{isOpen, setIsOpen, addToCart, cart, deleteFromCart, itemsAmount, total, increment, decrement, calculateTotal}}>
+  <CartContext.Provider value={{isOpen, setIsOpen, addToCart, cart, deleteFromCart, itemsAmount, total, increment, decrement, calculateTotal, clearCart}}>
     {children}
   </CartContext.Provider>
   )
