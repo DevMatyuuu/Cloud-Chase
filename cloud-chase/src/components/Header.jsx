@@ -15,7 +15,7 @@ function Header() {
     <>
       <header>
         <div className='flex w-full bg-gradient-to-b from-gray-900 to-gray-600 pb-10 sl:pb-0 md:pb-16 md:pt-16 justify-center items-center gap-20 '>
-          <div className='md:flex md:absolute ml-[140px] md:mt-0 md:ml-8  md:mx-auto sl:mx-auto sl:mt-7 sl:ml-[470px]'>
+          <div className='md:flex md:absolute ml-[100px] md:mt-0 md:ml-0  md:mx-auto sl:mx-auto sl:mt-7 sl:ml-[470px]'>
             <Link to={`/`}>
               <img
                 src={logo}
