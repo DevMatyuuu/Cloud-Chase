@@ -22,7 +22,7 @@ function Cart() {
         </div>
         <div>
           {isCartEmpty ? (
-            <div className='text-white text-2xl uppercase text-center md:pt-48 sl:pt-[300px] pt-40 overflow-hidden'>
+            <div className='text-white text-2xl uppercase text-center md:pt-48 sl:pt-[170px] pt-40 overflow-hidden'>
               <Lottie
                 animationData={empty}
                 className='flex md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] mx-auto sl:top-[230px] lg:top-[230px] h-40 w-40 overflow-y-hidden'
@@ -46,7 +46,7 @@ function Cart() {
       {cart.length >= 1 && (
         <div className='mx-auto'>
           <div>
-            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-10 mt-0 text-xl text-white font-extrabold'>
+            <div className='flex md:ml-10 md:mt-7 sl:ml-[65px] ml-12 sl:mt-0 mt-0 text-xl text-white font-extrabold'>
               <div className='uppercase'>total:</div>
               <div className='md:ml-72 sl:ml-[224px] ml-40'>₱{total}</div>
             </div>

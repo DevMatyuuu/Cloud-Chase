@@ -35,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Product({ product }) {
-  const { setIsOpen } = useContext(CartContext);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(true);
   const classes = useStyles();
+  const {setIsOpen} = useContext(CartContext);
 
   useEffect(() => {
     const image = new Image();
@@ -59,7 +59,7 @@ function Product({ product }) {
 
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px] max-w-[180px] sm:h-[300px] sl:h-[240px] h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
+      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px]  sl:max-w-[240px] sm:max-w-[200px] max-w-[180px] sm:h-[300px] sl:h-[260px]  h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
         {showSkeleton && (
           <div className={classes.root}>
             <Skeleton variant="rect" className={classes.image} />
@@ -101,17 +101,17 @@ function Product({ product }) {
               <div className="md:text-sm text-[11px] sl:text-sm sm:text-sm lg:text-sm md:ml-0 ml-2 font-bold uppercase">
                 {product.attributes.title.substring(0, 35)}
               </div>
-              {product.attributes.isSale && (
-                <div className="absolute text-slate-200 md:text-xs sl:text-xs lg:text-xs sm:text-xs text-[10px] font-bold uppercase left-20 md:bottom-7 bottom-2 px-2 rounded-lg">
-                  Original price: ₱{origPrice}
-                </div>
+                {product.attributes.isSale && (
+                  <div className="absolute text-slate-200 md:text-xs sl:text-xs lg:text-xs sm:text-xs text-[10px] font-bold uppercase left-20 md:bottom-7 sl:bottom-5 bottom-2 px-2 rounded-lg">
+                     Original price: ₱{origPrice}
+                  </div>
               )}
               <div className="font-semibold text-yellow-500 mt-4">
                 {product.attributes.isSale ? (
-                  <div className="absolute text-yellow-500 md:text-sm  sl:text-sm sm:text-sm lg:text-sm text-[13px] font-bold uppercase md:left-5 left-2 md:bottom-6 bottom-3 px-2 rounded-lg">
+                  <div className="absolute text-yellow-500 md:text-sm  sl:text-sm sm:text-sm lg:text-sm text-[13px] font-bold uppercase md:left-5 left-2 md:bottom-6 sl:bottom-4 sl:ml-3 bottom-3 px-2 rounded-lg">
                     ₱{discountedPrice}
                   </div>
-                ) : (
+                   ) : (
                   <div className="absolute text-yellow-500 md:text-sm sl:text-sm lg:text-sm sm:text-sm text-[13px] font-bold uppercase sl:left-6 sl:bottom-4 md:left-5 left-2 md:bottom-6 bottom-3 px-2 rounded-lg">
                     ₱{origPrice}
                   </div>
