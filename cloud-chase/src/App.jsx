@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductDetails from './pages/ProductDetails';
 import Search from './pages/Search';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -28,6 +30,8 @@ function App() {
           <Route path="/products/:id" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         {!loading && <Footer />}
       </BrowserRouter>

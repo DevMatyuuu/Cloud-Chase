@@ -17,7 +17,7 @@ function Cart() {
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
-            className='flex sl:ml-[400px] cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-12 md:ml-96 sl:mt-10 mt-10 hover:scale-110 duration-300'
+            className='flex sl:ml-[400px] cursor-pointer justify-end text-white w-20 h-[30px] items-center md:mt-7 md:mb-5 md:ml-96 sl:mt-10 mt-10 hover:scale-110 duration-300'
           />
         </div>
         <div>
@@ -52,7 +52,7 @@ function Cart() {
             </div>
           </div>
           <div className='flex md:mt-0 sl:mt-0 mt-7'>
-            <Button onClick={clearCart}className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
+            <Button onClick={clearCart} className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
               Clear cart
             </Button>
             <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-20'>

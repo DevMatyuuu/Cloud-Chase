@@ -8,6 +8,7 @@ const CartProvider = ({children}) => {
   const [itemsAmount, setItemsAmount] = useState(0)
   const [amount, setAmount] = useState(0)
   const [total, setTotal] = useState(0)
+  
 
 //whole cart quantity of item
   useEffect(() => {
@@ -93,19 +94,19 @@ const CartProvider = ({children}) => {
 
     const calculateTotal = () => {
       let total = 0;
-  
+    
       cart.forEach((item) => {
-      
-        const itemTotalPrice = item.amount * (item.attributes.isSale ? discountedPrice : origPrice);
-        total += itemTotalPrice;
+        const itemTotalPrice = (item.attributes.isSale ? discountedPrice : origPrice);
+        total += itemTotalPrice || 0; 
       });
-  
+    
       return total;
     };
 
     const clearCart = () => {
       setCart([]);
     }
+    
 
 
   return(

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaDiscord } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -16,8 +17,8 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-center gap-5 mb-2 mt-5">
-        <div><a href="">About us</a></div>
-        <div><a href="">Contact us</a></div>
+        <Link to={'/about'}>About us</Link>
+        <Link to={'/contact'}>Contact Us</Link>
       </div>
       <div className="">Copyright &copy; Cloud Chase 2023. All rights reserved.</div>
     </div>
