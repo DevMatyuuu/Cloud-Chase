@@ -9,6 +9,13 @@ const CartProvider = ({children}) => {
   const [amount, setAmount] = useState(0)
   const [total, setTotal] = useState(0)
   
+//retreive data of the user
+  useEffect(() => {
+    const savedCart = localStorage.getItem('cart');
+    if (savedCart) {
+      setCart(JSON.parse(savedCart));
+    }
+  }, []);
 
 //whole cart quantity of item
   useEffect(() => {

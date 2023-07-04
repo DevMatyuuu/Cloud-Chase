@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { SlClose } from 'react-icons/sl';
 import { CartContext } from '../context/CartContext';
 import CartItem from './CartItem';
@@ -10,6 +10,11 @@ import { IoArrowForward } from 'react-icons/io5';
 function Cart() {
   const { setIsOpen, cart, total, clearCart } = useContext(CartContext);
   const isCartEmpty = cart.length === 0;
+
+  useEffect(() => {
+    // Save cart data to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <>

@@ -19,7 +19,7 @@ function Header() {
             <Note />
           </div>
           <div className='md:flex md:absolute sl:absolute absolute ml-[10px] md:mt-0 md:ml-5 md:mr-10  md:mx-auto sl:mx-auto sl:mt-7'>
-            <Link to={`/`}>
+            <Link to={`/home`}>
               <img
                 src={logo}
                 className='flex h-20 w-24 md:top-1 md:h-32 md:w-32 sl:w-32 sl:h-32'

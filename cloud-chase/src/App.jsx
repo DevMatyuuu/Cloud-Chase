@@ -1,5 +1,6 @@
+// App.js
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Header from './components/Header';
@@ -8,11 +9,20 @@ import ProductDetails from './pages/ProductDetails';
 import Search from './pages/Search';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import AgeVerification from './pages/AgeVerification';
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
+    // Check if verification status is stored in localStorage
+    const storedVerification = localStorage.getItem('isVerified');
+
+    if (storedVerification) {
+      setIsVerified(true);
+    }
+
     // Simulating a loading delay
     const timer = setTimeout(() => {
       setLoading(false);
@@ -21,19 +31,104 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleVerify = () => {
+    setIsVerified(true);
+    // Store verification status in localStorage
+    localStorage.setItem('isVerified', 'true');
+  };
+
   return (
     <>
       <BrowserRouter>
-        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products/:id" element={<Products />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactUs />} />
+          <Route
+            path="/"
+            element={<AgeVerification onVerify={handleVerify} isVerified={isVerified} />}
+          />
+          {isVerified ? (
+            <>
+              <Route
+                path="/home"
+                element={
+                  <>
+                    <Header />
+                    <Home />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="/products/:id"
+                element={
+                  <>
+                    <Header />
+                    <Products />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="/product/:id"
+                element={
+                  <>
+                    <Header />
+                    <ProductDetails />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="/search"
+                element={
+                  <>
+                    <Header />
+                    <Search />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="/about"
+                element={
+                  <>
+                    <Header />
+                    <AboutUs />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="/contact"
+                element={
+                  <>
+                    <Header />
+                    <ContactUs />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+              <Route
+                path="*"
+                element={
+                  <>
+                    <Header />
+                    <Navigate to="/home" replace />
+                    {!loading && <Footer />}
+                  </>
+                }
+              />
+            </>
+          ) : (
+            <Route
+              path="*"
+              element={
+                <>
+                  <Navigate to="/" replace />
+                </>
+              }
+            />
+          )}
         </Routes>
-        {!loading && <Footer />}
       </BrowserRouter>
     </>
   );

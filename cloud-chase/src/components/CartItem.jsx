@@ -53,9 +53,9 @@ function CartItem({ item }) {
         </div>
         <div className='md:mb-5 sl:mb-3 mb-5 md:text-md sl:text-md text-xs'>{item.attributes.title}</div>
         <div className='flex md:gap-10'>
-          <div className='text-yellow-500 md:text-sm sl:text-sm text-xs font-extrabold md:ml-1'>₱{item.attributes.isSale ? (discPrice) : (item.attributes.price)}</div>
+          <div className='text-yellow-500 md:text-sm sl:text-sm text-xs font-extrabold md:ml-1 ml-1'>₱{item.attributes.isSale ? (discPrice) : (item.attributes.price)}</div>
           {item.attributes.isSale && (
-            <div className='flex text-xs text-gray-400 items-center md:ml-12'>
+            <div className='flex text-xs text-gray-400 items-center md:ml-12 ml-14'>
               <div className='line-through'>₱{item.attributes.price}</div>
               <div className='ml-1'>20% off</div>
             </div>
@@ -76,13 +76,13 @@ function CartItem({ item }) {
               +
             </button>
           </div>
-          <div className='text-xs text-yellow-500 font-bold md:mt-1 md:ml-10'>
+          <div className='text-xs text-yellow-500 font-bold md:mt-1 md:ml-10 mt-1 ml-2'>
             Total: ₱{calculateTotal().toFixed(2)}
           </div>
         </div>
-        <div className='flex md:justify-start sl:justify-start justify-center mt-3'>
+        <div className='flex md:justify-start sl:justify-start justify-center md:mt-3 mt:mb-0 mb-6'>
           <button
-            className='text-xs md:mt-1 sl:mt-1 mt-0 md:mr-3 sl:mr-3 mr-0 md:ml-36 md:px-3 sl:px-3 px-1 py-1 text-white bg-red-600 rounded-lg md:whitespace-nowrap sl:whitespace-nowrap whitespace-nowrap hover:bg-red-700 duration-300'
+            className='text-xs md:mt-1 sl:mt-1 mt-3 md:mr-3 sl:mr-3 mr-0 md:ml-36 md:px-3 sl:px-3 px-4 py-1 ml-24 text-white bg-red-600 rounded-lg md:whitespace-nowrap sl:whitespace-nowrap whitespace-nowrap hover:bg-red-700 duration-300'
             onClick={() => deleteFromCart(item.id)}
           >
             Remove
