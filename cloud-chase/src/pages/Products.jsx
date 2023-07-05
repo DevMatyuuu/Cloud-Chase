@@ -31,7 +31,7 @@ function Products({ product }) {
           <div className='grid md:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 md:gap-10 sl:gap-10 md:mt-20 md:h-auto md:w-auto w-100 md:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
           {isLoading ? (
             // Show loading state
-            <span className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-20 mt-20 w-32 pb-[150px] md:ml-[650px] md:pb-24"><Lottie animationData={loading} className='mx-auto'/></span>
+            <span className="text-white mx-auto md:w-36 md:font-bold md:text-2xl ml-36 md:mt-20 mt-20 w-32 pb-[150px] md:ml-[650px] md:pb-24"><Lottie animationData={loading}/></span>
               ) : data && data.length > 0 ? (
                data?.map((product) => (
               <motion.div
