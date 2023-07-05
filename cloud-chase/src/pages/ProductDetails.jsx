@@ -17,8 +17,8 @@ function ProductDetails() {
   const {data} = useFetch(`/products?populate=*&filters[id][$eq]=${id}`)
     if (!data) {
       return (
-        <div className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-36  mt-32 w-32 pb-[180px] md:pb-[252px]">
-            <div className='mx-auto'>
+        <div className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-36  mt-32 w-32 pb-[180px] md:pb-[252px] justify-center">
+            <div className='mx-auto justify-center'>
               <Lottie animationData={loading}/>
            </div>
         </div>
