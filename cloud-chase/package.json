@@ -41,5 +41,20 @@
     "tailwindcss": "^3.3.2",
     "tailwindcss-animated": "^1.0.1",
     "vite": "^4.3.9"
+  },
+  "vercel": {
+    "builds": [
+      {
+        "src": "build/**",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ],
+    "name": "cloud-chase"
   }
 }
