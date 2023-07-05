@@ -21,11 +21,11 @@ function ProductDetails() {
   const categoryTitle = data[0].attributes.categories.data[0].attributes.title
 
   const handleOpenModal = () => {
-    setModalOpen(true);
-    setTimeout(() => {
-      setModalOpen(false);
-    }, 800);
-  };
+      setModalOpen(true);
+      setTimeout(() => {
+        setModalOpen(false);
+      }, 800);
+    };
 
     const origPrice = data[0].attributes.price
     const discPercentage = 20

@@ -1,4 +1,3 @@
-// App.js
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
@@ -10,20 +9,17 @@ import Search from './pages/Search';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import AgeVerification from './pages/AgeVerification';
+import reload from './assets/reload.json'
+import Lottie from 'lottie-react'
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
 
   useEffect(() => {
-    // Check if verification status is stored in localStorage
     const storedVerification = localStorage.getItem('isVerified');
+    setIsVerified(storedVerification === 'true');
 
-    if (storedVerification) {
-      setIsVerified(true);
-    }
-
-    // Simulating a loading delay
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -33,102 +29,110 @@ function App() {
 
   const handleVerify = () => {
     setIsVerified(true);
-    // Store verification status in localStorage
     localStorage.setItem('isVerified', 'true');
   };
 
   return (
     <>
       <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<AgeVerification onVerify={handleVerify} isVerified={isVerified} />}
-          />
-          {isVerified ? (
-            <>
-              <Route
-                path="/home"
-                element={
-                  <>
-                    <Header />
-                    <Home />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="/products/:id"
-                element={
-                  <>
-                    <Header />
-                    <Products />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="/product/:id"
-                element={
-                  <>
-                    <Header />
-                    <ProductDetails />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="/search"
-                element={
-                  <>
-                    <Header />
-                    <Search />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="/about"
-                element={
-                  <>
-                    <Header />
-                    <AboutUs />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="/contact"
-                element={
-                  <>
-                    <Header />
-                    <ContactUs />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-              <Route
-                path="*"
-                element={
-                  <>
-                    <Header />
-                    <Navigate to="/home" replace />
-                    {!loading && <Footer />}
-                  </>
-                }
-              />
-            </>
-          ) : (
+        {loading ? (
+          <>
+          <div className="loading md:w-36 md:mt-[350px] mt-80 w-20 md:pb-[380px] mx-auto"><Lottie animationData={reload}/></div>
+          </>
+        ) : (
+          // Content is displayed once loading is complete
+          <Routes>
             <Route
-              path="*"
-              element={
-                <>
-                  <Navigate to="/" replace />
-                </>
-              }
+              path="/"
+              element={<AgeVerification onVerify={handleVerify} isVerified={isVerified} />}
             />
-          )}
-        </Routes>
+            {isVerified ? (
+              <>
+                <Route
+                  path="/home"
+                  element={
+                    <>
+                      <Header />
+                      <Home />
+                      <Footer />
+                    </>
+                  }
+                />
+                <Route
+                  path="/products/:id"
+                  element={
+                    <>
+                      <Header />
+                      <Products />
+                      {!loading && <Footer />}
+                    </>
+                  }
+                />
+                <Route
+                  path="/product/:id"
+                  element={
+                    <>
+                      <Header />
+                      <ProductDetails />
+                      {!loading && <Footer />}
+                    </>
+                  }
+                />
+                <Route
+                  path="/search"
+                  element={
+                    <>
+                      <Header />
+                      <Search />
+                      <Footer />
+                    </>
+                  }
+                />
+                <Route
+                  path="/about"
+                  element={
+                    <>
+                      <Header />
+                      <AboutUs />
+                      <Footer />
+                    </>
+                  }
+                />
+                <Route
+                  path="/contact"
+                  element={
+                    <>
+                      <Header />
+                      <ContactUs />
+                      <Footer />
+                    </>
+                  }
+                />
+                <Route
+                  path="*"
+                  element={
+                    <>
+                      <Header />
+                      <Navigate to="/home" replace />
+                      {!loading && <Footer />}
+                    </>
+                  }
+                />
+              </>
+            ) : (
+              <>
+                <Route
+                  path="*"
+                  element={
+                    <>
+                      <Navigate to="/" replace />
+                    </>
+                  }
+                />
+              </>
+            )}
+          </Routes>
+        )}
       </BrowserRouter>
     </>
   );

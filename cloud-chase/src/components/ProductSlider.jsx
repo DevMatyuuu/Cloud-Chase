@@ -16,8 +16,8 @@ function ProductSlider({data}) {
             slidesPerView: 1,
             spaceBetween:20
         },
-        421: {
-            slidesPerView: 1,
+        600: {
+            slidesPerView: 2,
             spaceBetween:20
         },
         1024: {
