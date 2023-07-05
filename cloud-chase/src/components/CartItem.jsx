@@ -43,7 +43,7 @@ function CartItem({ item }) {
   const discPrice = item.attributes.price - (item.attributes.price * (20 / 100)) 
 
   return (
-    <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 sl:ml-11 rounded-xl md:pl-12 sl:gap-5 sl:pl-14 bg-slate-700 font-poppins md:max-w-[430px] sl:max-w-[380px] mb-10 pt-7 pl-12'>
+    <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 sl:ml-11 rounded-xl md:pl-12 sl:gap-5 sl:pl-14 bg-slate-700 font-poppins md:max-w-[430px] sl:max-w-[380px] mb-10 pt-7 pl-8'>
       <Link to={`/product/${item.id}`} className='w-[120px] h-[120px] sl:w-[300px]'>
         <img src={`https://cloud-chase-be-production-e564.up.railway.app${item.attributes.image.data.attributes.url}`} onClick={() => setIsOpen(false)} />
       </Link>
