@@ -30,7 +30,7 @@ function Products({ product }) {
           </motion.div>
           {isLoading ? (
             // Show loading state
-            <div className="text-white mx-auto text-center md:mx-auto md:w-36 md:font-bold md:text-2xl md:mt-40 mt-20 w-32 pb-[150px] md:pb-24">
+            <div className="text-white mx-auto text-center md:mx-auto md:w-36 md:font-bold md:text-2xl md:mt-40 mt-32 w-32 pb-[150px] md:pb-24">
               <div className='mx-auto  text-center'>
                 <Lottie animationData={loading}/>
                </div>
