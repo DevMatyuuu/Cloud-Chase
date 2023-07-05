@@ -16,7 +16,7 @@ function ProductDetails() {
   const {id} = useParams()
   const {data} = useFetch(`/products?populate=*&filters[id][$eq]=${id}`)
     if (!data) {
-      return <div className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-36 ml-[120px] mt-32 w-32 pb-[180px] md:ml-[750px] md:pb-[252px]"><Lottie animationData={loading}/></div>
+      return <div className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-36 ml-[120px] mt-32 w-32 pb-[180px] md:ml-[800px] md:pb-[252px]"><Lottie animationData={loading}/></div>
     }
   const categoryTitle = data[0].attributes.categories.data[0].attributes.title
 
