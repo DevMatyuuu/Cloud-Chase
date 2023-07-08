@@ -34,7 +34,7 @@ function AgeVerification({ onVerify, isVerified }) {
   return (
     <div className="md:mt-40 mt-40">
       <div className="container mx-auto">
-        <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] h-[300px] md:w-[800px] w-[350px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
+        <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] h-[500px] md:w-[800px] w-[350px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
           <div className="md:ml-8 mt-3 ml-5">
             <VerNote />
           </div>
@@ -56,7 +56,7 @@ function AgeVerification({ onVerify, isVerified }) {
                 type="number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
-                className="bg-slate-900 md:w-12 w-6 text-center md:mr-2 md:pl-3 md:ml-2 mr-2 ml-2 rounded-lg"
+                className="bg-slate-900 md:w-12 w-10 text-center md:mr-2 md:pl-3 md:ml-2 mr-2 ml-2 rounded-lg"
               />
               years old
             </div>
@@ -77,7 +77,7 @@ function AgeVerification({ onVerify, isVerified }) {
           >
             <div className="flex-col md:mb-20">
               <div className="text-center text-red-400 text-xl md:mb-4">Access Denied</div>
-              <img src={denied} className="bg-transparent md:h-36" alt="Denied" />
+              <img src={denied} className="bg-transparent md:h-36 h-20" alt="Denied" />
             </div>
           </Modal>
         </div>
