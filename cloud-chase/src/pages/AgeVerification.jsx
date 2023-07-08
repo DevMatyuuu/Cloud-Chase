@@ -32,7 +32,7 @@ function AgeVerification({ onVerify, isVerified }) {
   };
 
   return (
-    <div className="md:mt-40 mt-28">
+    <div className="md:mt-40 mt-40">
       <div className="container mx-auto">
         <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] h-[300px] md:w-[800px] w-[350px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
           <div className="md:ml-8 md">
@@ -43,10 +43,10 @@ function AgeVerification({ onVerify, isVerified }) {
               <img src={logo} className="md:h-32 sl:h-32 h-20 mx-auto" alt="Logo" />
             </div>
             <div className="mx-auto md:mb-7">
-              <span className="uppercase font-bold md:text-2xl text-lg">welcome to cloud chase!</span>
+              <span className="uppercase font-bold md:text-2xl text-md">welcome to cloud chase!</span>
             </div>
             <div className="mx-auto md:mt-3 md:mb-8">
-              <span className="uppercase font-bold md:text-md text-lg">
+              <span className="uppercase font-bold md:text-md text-md">
                 please input your age to verify if you can access the shop
               </span>
             </div>
