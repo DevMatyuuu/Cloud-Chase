@@ -1,4 +1,3 @@
-// AgeVerification.js
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Card, Button } from '@material-tailwind/react';
@@ -33,15 +32,15 @@ function AgeVerification({ onVerify, isVerified }) {
   };
 
   return (
-    <div className="md:mt-40">
+    <div className="md:mt-40 mt-28">
       <div className="container mx-auto">
-        <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] md:w-[800px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
+        <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] h-[300px] md:w-[800px] w-[400px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
           <div className="md:ml-8 md">
             <VerNote />
           </div>
           <div className="mx-auto">
             <div className="mx-auto md:mb-3">
-              <img src={logo} className="md:h-32 mx-auto" alt="Logo" />
+              <img src={logo} className="md:h-32 sl:h-32 h-20 mx-auto" alt="Logo" />
             </div>
             <div className="mx-auto md:mb-7">
               <span className="uppercase font-bold md:text-2xl">welcome to cloud chase!</span>
