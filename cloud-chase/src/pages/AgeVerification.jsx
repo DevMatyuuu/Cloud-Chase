@@ -77,7 +77,7 @@ function AgeVerification({ onVerify, isVerified }) {
           >
             <div className="flex-col md:mb-20 mx-auto">
               <div className="text-center text-red-400 text-xl md:mb-4 mb-4">Access Denied</div>
-              <img src={denied} className="bg-transparent md:h-36 h-28" alt="Denied" />
+              <img src={denied} className="bg-transparent md:h-36 h-28 mx-auto text-center" alt="Denied" />
             </div>
           </Modal>
         </div>
