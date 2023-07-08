@@ -42,25 +42,25 @@ function AgeVerification({ onVerify, isVerified }) {
             <div className="mx-auto md:mb-3">
               <img src={logo} className="md:h-32 sl:h-32 h-20 mx-auto" alt="Logo" />
             </div>
-            <div className="mx-auto md:mb-7">
-              <span className="uppercase font-bold md:text-2xl text-md">welcome to cloud chase!</span>
+            <div className="mx-auto md:mb-7 mb-5">
+              <span className="uppercase font-bold md:text-2xl text-sm">welcome to cloud chase!</span>
             </div>
-            <div className="mx-auto md:mt-3 md:mb-8">
-              <span className="uppercase font-bold md:text-md text-md">
+            <div className="mx-auto md:mt-3 md:mb-8 mt-3 mb-7">
+              <span className="uppercase font-bold md:text-md text-sm">
                 please input your age to verify if you can access the shop
               </span>
             </div>
-            <div className="mx-auto md:mt-3 md:mb-7">
+            <div className="mx-auto md:mt-3 md:mb-7 mt-3 mb-7">
               I am
               <input
                 type="number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
-                className="bg-slate-900 md:w-12 w-6 text-center md:mr-2 md:pl-3 md:ml-2 rounded-lg"
+                className="bg-slate-900 md:w-12 w-6 text-center md:mr-2 md:pl-3 md:ml-2 mr-2 ml-2 rounded-lg"
               />
               years old
             </div>
-            <div className="mx-auto md:mt-3">
+            <div className="mx-auto md:mt-3 mt-5">
               <Button onClick={handleVerify} className="bg-yellow-500 md:px-16 text-[13px] text-black">
                 verify
               </Button>
