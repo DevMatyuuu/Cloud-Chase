@@ -76,8 +76,8 @@ function AgeVerification({ onVerify, isVerified }) {
             overlayClassName="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
           >
             <div className="flex-col md:mb-20 mx-auto">
-              <div className="text-center text-red-400 text-xl md:mb-4">Access Denied</div>
-              <img src={denied} className="bg-transparent md:h-36 h-20" alt="Denied" />
+              <div className="text-center text-red-400 text-xl md:mb-4 mb-4">Access Denied</div>
+              <img src={denied} className="bg-transparent md:h-36 h-28" alt="Denied" />
             </div>
           </Modal>
         </div>
