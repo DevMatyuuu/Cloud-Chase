@@ -56,7 +56,7 @@ function AgeVerification({ onVerify, isVerified }) {
                 type="number"
                 value={age}
                 onChange={(e) => setAge(e.target.value)}
-                className="bg-slate-900 md:w-12 text-center md:mr-2 md:pl-3 md:ml-2 rounded-lg"
+                className="bg-slate-900 md:w-12 w-2 text-center md:mr-2 md:pl-3 md:ml-2 rounded-lg"
               />
               years old
             </div>
