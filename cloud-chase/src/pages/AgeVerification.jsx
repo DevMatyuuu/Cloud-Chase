@@ -35,7 +35,7 @@ function AgeVerification({ onVerify, isVerified }) {
     <div className="md:mt-40 mt-40">
       <div className="container mx-auto">
         <Card className="bg-gradient-to-b from-gray-900 to-gray-600 text-center text-white md:h-[500px] h-[300px] md:w-[800px] w-[350px] mx-auto md:pt-5 rounded-2xl shadow-2xl">
-          <div className="md:ml-8 md">
+          <div className="md:ml-8 mt-3 ml-5">
             <VerNote />
           </div>
           <div className="mx-auto">
