@@ -18,7 +18,7 @@ function Products({ product }) {
   }, [data]);
 
   return (
-    <div className='mb-10 pt-0 md:pb-[100px] sl:mb-60 sm:pt-0 font-poppins'>
+    <div className='mb-10 pt-0 md:pb-[100px] sl:mb-60 sm:mb-24 sm:pt-0 font-poppins'>
       <div className='container mx-auto'>
         <main>
           <motion.div

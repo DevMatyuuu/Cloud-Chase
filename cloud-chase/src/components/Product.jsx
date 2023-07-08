@@ -59,7 +59,7 @@ function Product({ product }) {
 
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px]  sl:max-w-[240px] sm:max-w-[200px] max-w-[180px] sm:h-[300px] sl:h-[260px]  h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
+      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px]  sl:max-w-[240px] sm:max-w-[200px] max-w-[180px] sm:h-[290px] sl:h-[260px]  h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
         {showSkeleton && (
           <div className={classes.root}>
             <Skeleton variant="rect" className={classes.image} />
@@ -71,7 +71,7 @@ function Product({ product }) {
         {!showSkeleton && (
           <>
             {product.attributes.isSale && (
-              <Lottie animationData={sale} className="absolute mr-44" />
+              <Lottie animationData={sale} className="absolute mr-44 sm:mr-32" />
             )}
             {product.attributes.isNew && (
               <div className="absolute bg-amber-400 text-black text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg">
@@ -83,7 +83,7 @@ function Product({ product }) {
                 <img
                   onClick={() => setIsOpen(false)}
                   src={`https://cloud-chase-be-production-e564.up.railway.app${product.attributes.image.data.attributes.url}`}
-                  className="sm:w-[100px] md:h-[120px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all"
+                  className="sm:w-[120px] md:h-[120px] sm:h-[100px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all "
                   alt={product.attributes.title}
                 />
               ) : (
@@ -95,10 +95,10 @@ function Product({ product }) {
               )}
             </div>
             <div className="md:mb-5 md:ml-5 md:mt-0 sl:mt-0  text-white p-2 sl:ml-4">
-              <div className="text-[12px] font-bold mb-2 md:mt-0 md:ml-0 mt-2 ml-2 text-yellow-500 md:mb-5">
+              <div className="text-[12px] font-bold mb-2 md:mt-0 md:ml-0 mt-2 sm:mt-0 ml-2 text-yellow-500 md:mb-5">
                 {product.attributes.categories.data[0].attributes.title}
               </div>
-              <div className="md:text-sm text-[11px] sl:text-sm sm:text-sm lg:text-sm md:ml-0 ml-2 font-bold uppercase">
+              <div className="md:text-sm text-[11px] sl:text-sm sm:text-xs lg:text-sm md:ml-0 ml-2 font-bold uppercase">
                 {product.attributes.title.substring(0, 35)}
               </div>
                 {product.attributes.isSale && (

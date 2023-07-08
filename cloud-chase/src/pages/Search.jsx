@@ -15,7 +15,7 @@ function Search() {
 
   return (
     <div>
-      <div className="container mx-auto md:mx-auto mt-10 md:mt-10 md:pb-[104px] pb-[117px]">
+      <div className="container mx-auto md:mx-auto mt-10 md:mt-10 md:pb-[104px] sm:pb-12 pb-[117px]">
         <span className="uppercase text-white font-bold md:text-3xl text-md md:mt-0 md:ml-3 ml-9">
           Result for: "{searchTerm}"
         </span>
@@ -26,7 +26,7 @@ function Search() {
           ) : data && data.length > 0 ? (
             // Show data if available
             data.map((product) => (
-              <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px] max-w-[180px] sm:h-[300px] sl:h-[240px] h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl  md:mt-5" key={product.id}>
+              <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px] sm:max-w-[200px] max-w-[180px] sm:h-[290px] sl:h-[240px] h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl  md:mt-5" key={product.id}>
                 <Product product={product} />
               </div>
             ))
