@@ -74,7 +74,7 @@ function Product({ product }) {
               <Lottie animationData={sale} className="absolute mr-44 sm:mr-32" />
             )}
             {product.attributes.isNew && (
-              <div className="absolute bg-amber-400 text-black text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg">
+              <div className="absolute bg-gradient-to-r from-purple-900 via-purple-900 to-violet-800 text-white text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg">
                 New
               </div>
             )}
@@ -95,24 +95,24 @@ function Product({ product }) {
               )}
             </div>
             <div className="md:mb-5 md:ml-5 md:mt-0 sl:mt-0  text-white p-2 sl:ml-4">
-              <div className="text-[12px] font-bold mb-2 md:mt-0 md:ml-0 mt-2 sm:mt-0 ml-2 text-yellow-500 md:mb-5">
+              <div className="text-[12px] font-bold mb-2 md:mt-0 md:ml-0 mt-2 sm:mt-0 ml-2 text-violet-300 md:mb-5">
                 {product.attributes.categories.data[0].attributes.title}
               </div>
               <div className="md:text-sm text-[11px] sl:text-sm sm:text-xs lg:text-sm md:ml-0 ml-2 font-bold uppercase">
                 {product.attributes.title.substring(0, 35)}
               </div>
                 {product.attributes.isSale && (
-                  <div className="absolute text-slate-200 md:text-xs sl:text-xs lg:text-xs sm:text-xs text-[10px] font-bold uppercase left-20 md:bottom-7 sl:bottom-5 bottom-2 px-2 rounded-lg">
+                  <div className="absolute text-slate-200 md:text-xs sl:text-xs lg:text-xs sm:text-xs text-[10px] font-bold uppercase left-20 md:bottom-6 sl:bottom-5 bottom-2 px-2 rounded-lg">
                      Original price: ₱{origPrice}
                   </div>
               )}
-              <div className="font-semibold text-yellow-500 mt-4">
+              <div className="font-semibold mt-4">
                 {product.attributes.isSale ? (
-                  <div className="absolute text-yellow-500 md:text-sm  sl:text-sm sm:text-sm lg:text-sm text-[13px] font-bold uppercase md:left-5 left-2 md:bottom-6 sl:bottom-4 sl:ml-3 bottom-3 px-2 rounded-lg">
+                  <div className="absolute text-violet-300 md:text-sm  sl:text-sm sm:text-sm lg:text-sm text-[13px] font-bold uppercase md:left-5 left-2 md:bottom-6 sl:bottom-4 sl:ml-3 bottom-3 px-2 rounded-lg">
                     ₱{discountedPrice}
                   </div>
                    ) : (
-                  <div className="absolute text-yellow-500 md:text-sm sl:text-sm lg:text-sm sm:text-sm text-[13px] font-bold uppercase sl:left-6 sl:bottom-4 md:left-5 left-2 md:bottom-6 bottom-3 px-2 rounded-lg">
+                  <div className="absolute text-violet-300 md:text-sm sl:text-sm lg:text-sm sm:text-sm text-[13px] font-bold uppercase sl:left-6 sl:bottom-4 md:left-5 left-2 md:bottom-6 bottom-3 px-2 rounded-lg">
                     ₱{origPrice}
                   </div>
                 )}

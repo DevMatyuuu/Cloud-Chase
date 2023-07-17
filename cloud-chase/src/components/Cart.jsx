@@ -57,10 +57,10 @@ function Cart() {
             </div>
           </div>
           <div className='flex md:mt-0 sl:mt-0 mt-7'>
-            <Button onClick={clearCart} className='uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
+            <Button onClick={clearCart} className='uppercase hover:bg-purple-700 hover:text-white rounded-xl bg-purple-500 text-white md:ml-9 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:mt-5 sl:mb-5 sl:ml-16 py-3 px-6 ml-12'>
               Clear cart
             </Button>
-            <Button className='flex uppercase hover:bg-yellow-600 hover:text-white rounded-xl bg-yellow-500 text-black md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-20'>
+            <Button className='flex uppercase hover:bg-purple-700 hover:text-white rounded-xl bg-purple-500 text-white md:ml-5 md:mt-7 md:py-4 md:px-16 sl:py-3 sl:px-10 sl:ml-12 sl:mt-5 sl:mb-5 py-3 px-3 ml-20'>
               <span>Checkout</span> <IoArrowForward className='ml-2 mt-[3px]' />
             </Button>
           </div>

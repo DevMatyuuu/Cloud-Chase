@@ -16,13 +16,15 @@ function Search() {
   return (
     <div>
       <div className="container mx-auto md:mx-auto mt-10 md:mt-10 md:pb-[104px] pb-[180px]">
-        <span className="uppercase text-white font-bold md:text-3xl sl:text-2xl sm:text-xl text-md md:mt-0 md:ml-3 ml-9">
-          Result for: "{searchTerm}"
-        </span>
-        <div className='mx-auto'>
+        {data && data.length > 1 ? <span className="uppercase text-white font-bold md:text-3xl sl:text-2xl sm:text-xl text-md md:mt-0 md:ml-3 ml-9">
+          {data.length} Results for : "{searchTerm}"
+        </span> : <span className="uppercase text-white font-bold md:text-3xl sl:text-2xl sm:text-xl text-md md:mt-0 md:ml-3 ml-9">
+          {data.length} Result for : "{searchTerm}"
+        </span> }
+        <div className='mx-auto flex md:gap-14'>
           {isLoading ? (
             // Show loading state
-            <div className="text-white mx-auto mt-20 md:pb-[145px] sl:pb-[60px] sm:pb-[50px] pb-14"><Lottie animationData={loading} className='mx-auto h-32'/></div>
+            <div className=" text-white mx-auto mt-20 md:pb-[145px] sl:pb-[60px] sm:pb-[50px] pb-14"><Lottie animationData={loading} className='mx-auto h-32'/></div>
           ) : data && data.length > 0 ? (
             // Show data if available
             data.map((product) => (

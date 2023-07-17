@@ -37,7 +37,9 @@ function App() {
       <BrowserRouter>
         {loading ? (
           <>
-          <div className="loading md:w-36 md:mt-[350px] mt-80 w-20 md:pb-[380px] mx-auto"><Lottie animationData={reload}/></div>
+          <div className="grid loading md:w-36 md:mt-[350px] mt-80 w-20 md:pb-[380px] mx-auto">
+            <p className='text-center mb-5 text-lg text-white'>loading</p>
+            <Lottie animationData={reload}/></div>
           </>
         ) : (
           // Content is displayed once loading is complete

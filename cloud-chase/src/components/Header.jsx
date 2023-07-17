@@ -32,7 +32,7 @@ function Header() {
           <div  onClick={() => setIsOpen(!isOpen)}  className='flex md:absolute md:ml-[1450px] sl:ml-[950px] sm:ml-[470px] ml-80 md:mt-1 justify-end  sl:mt-4 md:max-w-[200px] sl:mr-24'>
             <SlBag  className='flex cursor-pointer h-28 w-8 right-0 top-3 text-white sl:ml-28' />
             <div className='absolute md:mt-16 md:mr-5 sl:mr-5 mr-5'>
-            <div onClick={() => setIsOpen(!isOpen)} className='absolute  bg-yellow-500 text-black font-[8px] w-[20px] h-[20px] rounded-full md:mt-0 sl:mt-0 sl:top-16 mt-[64px] flex justify-center items-center tracking-[-0.1em] cursor-pointer'>
+            <div onClick={() => setIsOpen(!isOpen)} className='absolute  bg-gradient-to-r from-purple-900 via-purple-900 to-violet-800 text-white font-[8px] w-[20px] h-[20px] rounded-full md:mt-0 sl:mt-0 sl:top-16 mt-[64px] flex justify-center items-center tracking-[-0.1em] cursor-pointer'>
               {itemsAmount}
             </div>
             </div>

@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { IoClose } from 'react-icons/io5';
 import { CartContext } from '../context/CartContext';
 
 function CartItem({ item }) {
@@ -48,12 +47,12 @@ function CartItem({ item }) {
         <img src={`https://cloud-chase-be-production-e564.up.railway.app${item.attributes.image.data.attributes.url}`} onClick={() => setIsOpen(false)} />
       </Link>
       <div className='md:ml-5 sl:ml-5 ml-4'>
-        <div className='md:mb-2 sl:mb-2 mb-2 text-yellow-500 uppercase text-xs font-bold'>
+        <div className='md:mb-2 sl:mb-2 mb-2 text-violet-300 uppercase text-xs font-bold'>
           {item.attributes.categories.data[0].attributes.title}
         </div>
         <div className='md:mb-5 sl:mb-3 mb-5 md:text-md sl:text-md text-xs'>{item.attributes.title}</div>
         <div className='flex md:gap-10'>
-          <div className='text-yellow-500 md:text-sm sl:text-sm text-xs font-extrabold md:ml-1 ml-1'>₱{item.attributes.isSale ? (discPrice) : (item.attributes.price)}</div>
+          <div className='text-violet-300 md:text-sm sl:text-sm text-xs font-extrabold md:ml-1 ml-1'>₱{item.attributes.isSale ? (discPrice) : (item.attributes.price)}</div>
           {item.attributes.isSale && (
             <div className='flex text-xs text-gray-400 items-center md:ml-12 ml-14'>
               <div className='line-through'>₱{item.attributes.price}</div>
@@ -63,7 +62,7 @@ function CartItem({ item }) {
         </div>
         <div className='flex  md:gap-3 sl:gap-3 gap-2 mt-5'>
           <div className='flex items-center rounded-lg px-2 bg-slate-800'>
-            <button onClick={handleDecrement} className='text-yellow-500 md:mx-auto'>
+            <button onClick={handleDecrement} className='text-white md:mx-auto'>
               -
             </button>
             <input
@@ -72,11 +71,11 @@ function CartItem({ item }) {
               value={itemQty}
               onChange={quantityChange}
             />
-            <button onClick={handleIncrement} className='text-yellow-500'>
+            <button onClick={handleIncrement} className='text-white'>
               +
             </button>
           </div>
-          <div className='text-xs text-yellow-500 font-bold md:mt-1 md:ml-10 mt-1 ml-2'>
+          <div className='text-xs text-violet-300 font-bold md:mt-1 md:ml-10 mt-1 ml-2'>
             Total: ₱{calculateTotal().toFixed(2)}
           </div>
         </div>
