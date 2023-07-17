@@ -18,7 +18,7 @@ function Hero() {
                 <div className='flex flex-col md:hover:duration-300 md:hover:scale-105 md:ml-3 sm:ml-8 md:mt-0 mt-5'>
                  <p className='text-2xl uppercase font-bold max-w-[300px] md:mb-10 sl:mb-8 mb-8 md:mt-12 md:ml-2 '>Affordable and Quality Pods</p>
                  <p className='text-sm font-bold max-w-[100px] text-black px-2 py-2 bg-yellow-500 rounded-xl text-center uppercase md:ml-1'>shop now</p>
-                 <img src={sale1} className='md:h-[350px] sm:h-[350px] md:ml-52 sl:ml-44 sm:ml-52 ml-28 md:mt-8 absolute' />
+                 <img src={sale1} className='md:h-[350px] sm:h-[350px] md:ml-52 sl:ml-44 sm:ml-52  ml-28 md:mt-8 absolute' />
                 </div>
             </Link> 
             </div>
