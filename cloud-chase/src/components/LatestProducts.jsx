@@ -9,7 +9,7 @@ function LatestProducts() {
   return (
     <div className='mb-16 font-poppins'>
       <div className='container mx-auto'>
-        <h2 className='lg:text-4xl text-2xl mb-10 text-center text-white font-bold'>NEW ARRIVAL</h2>
+        <h2 className='lg:text-4xl text-2xl mb-10 text-center text-white font-bold'>NEW ARRIVALS</h2>
       </div>
       <ProductSlider data={data}/>
       

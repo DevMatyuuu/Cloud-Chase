@@ -10,7 +10,7 @@ import '../slider.css'
 
 function RelatedSlider({data}) {
   return (
-    <Swiper modules={[Pagination, Navigation]} loop={false} navigation={true}
+    <Swiper modules={[Pagination, Navigation]} loop={false} depth={200} navigation={true}
     breakpoints={{
         320: {
             slidesPerView: 1,

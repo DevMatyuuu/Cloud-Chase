@@ -42,7 +42,7 @@ function App() {
             <Lottie animationData={reload}/></div>
           </>
         ) : (
-          // Content is displayed once loading is complete
+          // Contents below will show once loading is complete
           <Routes>
             <Route
               path="/"

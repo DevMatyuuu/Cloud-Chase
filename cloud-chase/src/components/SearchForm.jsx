@@ -35,7 +35,7 @@ function SearchForm() {
       className={`${isAnimating ? 'animate-shake text-red-500' : 'text-white'}`}
     >
       <div>
-        <button className="absolute bg-gradient-to-r from-purple-900 via-purple-900 to-violet-800 w-[70px] md:h-[35px] sl:h-[35px] sm:h-[40px] h-[38px] rounded-r-lg md:ml-[250px] sl:ml-[218px] sm:ml-[430px] sl:mt-6 md:mt-[2px] ml-[280px] cursor-pointer">
+        <button className="absolute bg-gradient-to-r from-gray-700 via-gray-900 to-black w-[70px] md:h-[35px] sl:h-[35px] sm:h-[40px] h-[38px] rounded-r-lg md:ml-[250px] sl:ml-[218px] sm:ml-[430px] sl:mt-6 md:mt-[2px] ml-[280px] cursor-pointer">
           <FiSearch className="sl:mt-[0px] sl:ml-[25px] ml-7 " />
         </button>
         <input

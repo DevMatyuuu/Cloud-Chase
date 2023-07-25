@@ -38,10 +38,13 @@ export default {
               transform: 'translate3d(4px, 0, 0)'
           }
   },
+      width: ['group-hover'],
+      height: ['group-hover'],
 }},
   
   plugins: [
   ],
 }
+
 }
 

@@ -46,17 +46,17 @@ function ProductDetails() {
              <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
           </div>
        <div className='sm:mt-52 mt-48 font-semibold md:mt-20 md:text-start'>
-          <div className='text-violet-500 uppercase text-xs md:text-[14px] md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>
+          <div className='text-slate-300 uppercase text-xs md:text-[14px] md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>
           <h2 className='text-white text-sm md:text-2xl md:mb-3 md:mt-2 sl:mb-5'>{data[0].attributes.title}</h2>
           <div className='text-white md:text-[16px] mt-2 font-normal md:max-w-[500px] max-w-[500px] md:w-auto sl:w-auto w-[360px] text-[11px] md:text-start sl:text-center sl:ml-12 sl:max-w-[700px] text-justify md:mb-8 '>{data[0].attributes.description}</div>
           <div className='flex sl:gap-5 sl:mt-5 mt-5 sm:ml-20 ml-24 md:ml-0'>
-          <div className='text-violet-300 md:ml-1 md:mt-3 sl:ml-80 sl:mt-4 mt-4'>{data[0].attributes.isSale ? (
-          <div className='text-violet-300 sm:text-start'>Now: ₱{discountedPrice}<span className='grid text-slate-300'> Before: ₱{origPrice}</span></div>
+          <div className='text-white md:ml-1 md:mt-3 sl:ml-80 sl:mt-4 mt-4'>{data[0].attributes.isSale ? (
+          <div className='text-white sm:text-start'>Now: ₱{discountedPrice}<span className='grid text-slate-400'> Before: ₱{origPrice}</span></div>
           ) : (
           <div className='md:mt-3'>₱{origPrice}</div>
           )}</div>
       <div>
-          <Button onClick={() => { addToCart(data, id); handleOpenModal(); }} className='bg-purple-500 hover:bg-purple-700 hover:scale-105 text-white md:py-4 py-2 md:px-4 px-2 md:ml-5 md:text-md sl:text-xs mt-3 sm:mt-4 sm:ml-6 ml-5 font-bold rounded-lg uppercase'>Add to cart</Button>
+          <Button onClick={() => { addToCart(data, id); handleOpenModal(); }} className='bg-black hover:bg-slate-800 hover:scale-105 text-white md:py-4 py-2 md:px-4 px-2 md:ml-5 md:text-md sl:text-xs mt-3 sm:mt-4 sm:ml-6 ml-5 font-bold rounded-lg uppercase'>Add to cart</Button>
       </div>
     </div>
   </div>
