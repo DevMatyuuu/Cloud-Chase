@@ -35,7 +35,7 @@ function ProductSlider({data}) {
     }} pagination={{
         clickable:true,
     }}
-    className='productSlider mx-auto lg:pl-0 md:pl-0 sm:pl-0 sl:pl-0 pl-0 lg:max-w-[1600px] md:max-w-[1480px] max-w-[1000px] md:pb-10 sm:pb-16 pb-10 justify-center'
+    className='productSlider z-0 mx-auto lg:pl-0 md:pl-0 sm:pl-0 sl:pl-0 pl-0 lg:max-w-[1600px] md:max-w-[1480px] max-w-[1000px] md:pb-10 sm:pb-16 pb-10 justify-center'
     
     >
         <>

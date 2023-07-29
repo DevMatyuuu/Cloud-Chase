@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-gray-600 py-7 text-center text-white">
-      <div className="flex justify-center gap-7 md:mb-10">
+      <div className="flex justify-center gap-7 md:mb-10 mb-3">
         <div>
           <a href=""><FaFacebook /></a>
         </div>

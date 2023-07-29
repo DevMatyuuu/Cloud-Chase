@@ -67,7 +67,7 @@ function ProductDetails() {
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}
         contentLabel="Modal"
-        className='modal fixed inset-0 flex items-center justify-center bg-transparent'
+        className='modal z-50 fixed inset-0 flex items-center justify-center bg-transparent'
         overlayClassName="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center" // Tailwind CSS classes for the modal overlay
       >
        <Lottie animationData={added} className='max-w-[400px] max-h-[400px]'/>

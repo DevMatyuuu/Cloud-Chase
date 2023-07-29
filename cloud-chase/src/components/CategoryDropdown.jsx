@@ -20,7 +20,7 @@ function CategoryDropdown() {
           onMouseLeave={handleMenuClose}
         >
           Products{" "}
-          <FaAngleDown />
+          <FaAngleDown className='mt-2 md:mt-0'/>
         </div>
       </MenuHandler>
       <MenuList

@@ -7,7 +7,7 @@ import CartProvider from './context/CartContext.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CartProvider>
-    <App />
+    <App className='font-poppins'/>
     </CartProvider>
   </React.StrictMode>,
 )
