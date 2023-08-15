@@ -43,7 +43,7 @@ function ProductDetails() {
       <div className='container mx-auto w-auto bg-gradient-to-b from-gray-900 to-gray-600 md:pb-20 md:mt-10 rounded-2xl md:max-w-[1100px] max-w-[1300px] sl:max-w-[800px] sl:pb-20 md:mb-20 mb-12 pt-0  pb-20'>
        <div className='md:flex flex text-center md:gap-10 md:ml-32=0 md:w-auto md:h-auto w-32 md:pt-0 sl:pt-0 pt-10 mx-auto justify-center items-center'>
           <div className='md:relative absolute flex md:w-auto mx-auto md:mx-0 sm:w-48 w-40 md:top-0 top-80 md:h-80 sm:h-40 h-28'>
-             <img src={`https://cloud-chase-be-production-e564.up.railway.app${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
+             <img src={`http://localhost:1337${data[0].attributes.image.data.attributes.url}`} className='md:max-h-[400px] md:max-w-[350px] md:w-100 md:mt-10 md:ml-0 sl:pt-10 max-h-60 mx-auto ' />
           </div>
        <div className='sm:mt-52 mt-48 font-semibold md:mt-20 md:text-start'>
           <div className='text-slate-300 uppercase text-xs md:text-[14px] md:mb-4 sl:mb-3 mb-2'>{data[0].attributes.categories.data[0].attributes.title}</div>

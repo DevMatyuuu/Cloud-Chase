@@ -42,7 +42,7 @@ function Product({ product }) {
 
   useEffect(() => {
     const image = new Image();
-    image.src = `https://cloud-chase-be-production-e564.up.railway.app${product.attributes.image.data.attributes.url}`;
+    image.src = `http://localhost:1337${product.attributes.image.data.attributes.url}`;
     image.onload = () => {
       setImageLoaded(true);
       setShowSkeleton(false);
@@ -82,7 +82,7 @@ function Product({ product }) {
               {imageLoaded ? (
                 <img
                   onClick={() => setIsOpen(false)}
-                  src={`https://cloud-chase-be-production-e564.up.railway.app${product.attributes.image.data.attributes.url}`}
+                  src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
                   className="sm:w-[120px] md:h-[120px] sm:h-[100px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all "
                   alt={product.attributes.title}
                 />
