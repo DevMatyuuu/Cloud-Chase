@@ -11,6 +11,8 @@ function CartItem({ item }) {
     setItemQty(item.amount);
   }, [item.amount]);
 
+  console.log(item)
+
   const quantityChange = (e) => {
     const inputValue = e.target.value;
     const numericValue = inputValue === '' ? '' : inputValue.replace(/\D/g, '');
@@ -35,34 +37,34 @@ function CartItem({ item }) {
   };
 
   const calculateTotal = () => {
-    const itemPrice = item.attributes.isSale ? item.attributes.price - (item.attributes.price * (20 / 100)) : item.attributes.price;
+    const itemPrice = item.isSale ? item.price - (item.price * (20 / 100)) : item.price;
     return itemQty * itemPrice;
   };
   
-  const discPrice = item.attributes.price - (item.attributes.price * (20 / 100)) 
+  const discPrice = item.price - (item.price * (20 / 100)) 
 
   return (
-    <div className='flex md:mt-10 md:ml-5 md:pt-8 md:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 sl:ml-11 rounded-xl md:pl-12 sl:gap-5 sl:pl-14 bg-slate-700 font-poppins md:max-w-[430px] sl:max-w-[380px] mb-10 pt-7 pl-8'>
-      <Link to={`/product/${item.id}`} className='w-[120px] h-[120px] sl:w-[300px]'>
-        <img src={`http://localhost:1337${item.attributes.image.data.attributes.url}`} onClick={() => setIsOpen(false)} />
+    <div className='flex mx-auto lg:pt-10 lg:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 rounded-xl justify-center lg:w-[90%] lg:gap-5 gap-8 sl:gap-5  bg-slate-700 font-poppins lg:max-w-[430px] sl:max-w-[380px] mb-10 pt-7'>
+      <Link to={`/product/${item.id}`} className='w-[120px] h-[20vh] sl:w-[300px]'>
+        <img src={item.image} onClick={() => setIsOpen(false)} />
       </Link>
-      <div className='md:ml-5 sl:ml-5 ml-4'>
-        <div className='md:mb-2 sl:mb-2 mb-2 text-slate-200 uppercase text-xs font-bold'>
-          {item.attributes.categories.data[0].attributes.title}
+      <div>
+        <div className='lg:mb-2 sl:mb-2 mb-2 text-slate-200 uppercase text-xs font-bold'>
+          {item.categories}
         </div>
-        <div className='md:mb-5 sl:mb-3 mb-5 md:text-md sl:text-md text-xs'>{item.attributes.title}</div>
-        <div className='flex md:gap-10'>
-          <div className='text-white md:text-sm sl:text-sm text-xs font-extrabold md:ml-1 ml-1'>₱{item.attributes.isSale ? (discPrice) : (item.attributes.price)}</div>
-          {item.attributes.isSale && (
-            <div className='flex text-xs text-gray-400 items-center md:ml-12 ml-14'>
-              <div className='line-through'>₱{item.attributes.price}</div>
+        <div className='lg:mb-5 sl:mb-3 mb-5 lg:text-base sl:text-base text-xs'>{item.title}</div>
+        <div className='flex lg:gap-10'>
+          <div className='text-white lg:text-sm sl:text-sm text-xs font-extrabold lg:ml-1 ml-1'>₱{item.isSale ? (discPrice) : (item.price)}</div>
+          {item.isSale && (
+            <div className='flex text-xs text-gray-400 items-center lg:ml-12 ml-14'>
+              <div className='line-through'>₱{item.price}</div>
               <div className='ml-1'>20% off</div>
             </div>
           )}
         </div>
-        <div className='flex  md:gap-3 sl:gap-3 gap-2 mt-5'>
+        <div className='flex  lg:gap-3 sl:gap-3 gap-2 mt-5'>
           <div className='flex items-center rounded-lg px-2 bg-slate-800'>
-            <button onClick={handleDecrement} className='text-white md:mx-auto'>
+            <button onClick={handleDecrement} className='text-white lg:mx-auto'>
               -
             </button>
             <input
@@ -75,13 +77,13 @@ function CartItem({ item }) {
               +
             </button>
           </div>
-          <div className='text-xs text-white font-bold md:mt-1 md:ml-10 mt-1 ml-2'>
+          <div className='text-xs text-white font-bold lg:mt-1 lg:ml-10 mt-1 ml-2'>
             Total: ₱{calculateTotal().toFixed(2)}
           </div>
         </div>
-        <div className='flex md:justify-start sl:justify-start justify-center md:mt-3 mt:mb-0 mb-6'>
+        <div className='flex lg:justify-start sl:justify-start justify-center lg:mt-3 mt:mb-0 mb-6'>
           <button
-            className='text-xs md:mt-1 sl:mt-1 mt-3 md:mr-3 sl:mr-3 mr-0 md:ml-36 md:px-3 sl:px-3 px-4 py-1 ml-24 text-white bg-red-600 rounded-lg md:whitespace-nowrap sl:whitespace-nowrap whitespace-nowrap hover:bg-red-700 duration-300'
+            className='text-xs lg:mt-1 sl:mt-1 mt-3 lg:mr-3 sl:mr-3 mr-0 lg:ml-36 lg:px-3 sl:px-3 px-4 py-1 ml-24 text-white bg-red-600 rounded-lg lg:whitespace-nowrap sl:whitespace-nowrap whitespace-nowrap hover:bg-red-700 duration-300'
             onClick={() => deleteFromCart(item.id)}
           >
             Remove

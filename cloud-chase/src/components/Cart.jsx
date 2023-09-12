@@ -16,9 +16,11 @@ function Cart() {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
+
+  console.log(cart)
   return (
     <>
-      <div className={`w-full md:h-[650px] sl:h-[650px] h-[500px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
+      <div className={`lg:w-full flex-col justify-center md:h-[650px] sl:h-[650px] h-[500px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
@@ -38,7 +40,7 @@ function Cart() {
               </span>
             </div>
           ) : (
-            <div className='text-white md:h-[560px] sl:h-560px] h-[500px] md:mt-0 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
+            <div className='flex flex-col justify-center text-white lg:h-[560px] sl:h-560px] h-[500px] lg:pt-16 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
               {cart.map((item) => (
                 <div key={item.id}>
                   <CartItem item={item} />

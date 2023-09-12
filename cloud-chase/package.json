@@ -19,6 +19,7 @@
     "@mui/material": "^5.13.5",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
+    "firebase": "^10.3.1",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",

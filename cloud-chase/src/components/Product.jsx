@@ -34,31 +34,34 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Product({ product }) {
+function Product({ products }) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [showSkeleton, setShowSkeleton] = useState(true);
   const classes = useStyles();
   const {setIsOpen} = useContext(CartContext);
+  
+  
+
 
   useEffect(() => {
     const image = new Image();
-    image.src = `http://localhost:1337${product.attributes.image.data.attributes.url}`;
+    image.src = products.image
     image.onload = () => {
       setImageLoaded(true);
       setShowSkeleton(false);
     };
-  }, [product.attributes.image.data.attributes.url]);
+  }, [products.image]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
   };
 
-  const origPrice = product.attributes.price;
+  const origPrice = products.price;
   const discPercentage = 20;
   const discountedPrice = origPrice - (origPrice * (discPercentage / 100));
 
   return (
-    <Link to={`/product/${product.id}`}>
+    <Link to={`/product/${products.id}`}>
       <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-full md:h-[320px] md:max-w-[300px]  sl:max-w-[240px] sm:max-w-[200px] max-w-[180px] sm:h-[290px] sl:h-[260px]  h-[250px] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
         {showSkeleton && (
           <div className={classes.root}>
@@ -70,10 +73,10 @@ function Product({ product }) {
         )}
         {!showSkeleton && (
           <>
-            {product.attributes.isSale && (
+            {products.isSale && (
               <Lottie animationData={sale} className="absolute mr-44 sm:mr-32" />
             )}
-            {product.attributes.isNew && (
+            {products.isNew && (
               <div className="absolute bg-gradient-to-r from-purple-900 via-purple-900 to-violet-800 text-white text-[10px] font-bold uppercase top-3 right-4 px-2 rounded-lg">
                 New
               </div>
@@ -82,9 +85,9 @@ function Product({ product }) {
               {imageLoaded ? (
                 <img
                   onClick={() => setIsOpen(false)}
-                  src={`http://localhost:1337${product.attributes.image.data.attributes.url}`}
+                  src={products.image}
                   className="sm:w-[120px] md:h-[120px] sm:h-[100px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all "
-                  alt={product.attributes.title}
+                  alt={products.title}
                 />
               ) : (
                 <Skeleton
@@ -96,18 +99,18 @@ function Product({ product }) {
             </div>
             <div className="md:mb-5 md:ml-5 md:mt-0 sl:mt-0  text-white p-2 sl:ml-4">
               <div className="text-[12px] font-bold mb-2 md:mt-0 md:ml-0 mt-2 sm:mt-0 ml-2 text-violet-300 md:mb-5">
-                {product.attributes.categories.data[0].attributes.title}
+                {products.categories}
               </div>
               <div className="md:text-sm text-[11px] sl:text-sm sm:text-xs lg:text-sm md:ml-0 ml-2 font-bold uppercase">
-                {product.attributes.title.substring(0, 35)}
+                {products.title.substring(0, 35)}
               </div>
-                {product.attributes.isSale && (
+                {products.isSale && (
                   <div className="absolute text-slate-200 md:text-xs sl:text-xs lg:text-xs sm:text-xs text-[10px] font-bold uppercase left-20 md:bottom-6 sl:bottom-5 bottom-2 px-2 rounded-lg">
                      Original price: ₱{origPrice}
                   </div>
               )}
               <div className="font-semibold mt-4">
-                {product.attributes.isSale ? (
+                {products.isSale ? (
                   <div className="absolute text-violet-300 md:text-sm  sl:text-sm sm:text-sm lg:text-sm text-[13px] font-bold uppercase md:left-5 left-2 md:bottom-6 sl:bottom-4 sl:ml-3 bottom-3 px-2 rounded-lg">
                     ₱{discountedPrice}
                   </div>

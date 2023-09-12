@@ -10,7 +10,7 @@ import '../slider.css'
 
 function RelatedSlider({data}) {
   return (
-    <Swiper modules={[Pagination, Navigation]} loop={false} depth={200} navigation={true}
+    <Swiper modules={[Pagination, Navigation]} loop={false} navigation={true}
     breakpoints={{
         320: {
             slidesPerView: 1,
@@ -39,7 +39,7 @@ function RelatedSlider({data}) {
     
     >
         <>
-        {data?.map(product => {
+        {data.map(product => {
             return (
             <SwiperSlide key={product.id}>
                 <Product product={product}/>

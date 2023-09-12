@@ -27,28 +27,28 @@ const CartProvider = ({children}) => {
   }, [cart])
 
   //add to cart
-  const addToCart = (item, id) => {
-    const itemID = parseInt(id)
-    const newItem = {...item[0], amount: 1}
-    setCart([...cart, newItem])
-    const cartItem = cart.find(item => {
-      return item.id === itemID
-    })
-
-      if (cartItem) {
-        const newCart = cart.map(item =>{
-          if (item.id === itemID) {
-            setAmount(cartItem.amount + 1)
-            return {...item, amount: cartItem.amount + 1}
-          } else {
-            return item
-          }
-        })
-        setCart(newCart)
-      } else {
-        setCart([...cart, newItem])
-      }
-  }
+  const addToCart = (item) => {
+    const itemID = item.id;
+  
+    const existingItem = cart.find((cartItem) => cartItem.id === itemID);
+  
+    if (existingItem) {
+      // If the item already exists in the cart, update its quantity
+      const updatedCart = cart.map((cartItem) => {
+        if (cartItem.id === itemID) {
+          return { ...cartItem, amount: cartItem.amount + 1 };
+        }
+        return cartItem;
+      });
+  
+      setCart(updatedCart);
+    } else {
+      // If the item is not in the cart, add it with a quantity of 1
+      const newItem = { ...item, amount: 1 };
+      setCart([...cart, newItem]);
+    }
+  };
+  
 
 //delete item from cart
     const deleteFromCart = (id) => {
@@ -61,11 +61,11 @@ const CartProvider = ({children}) => {
 //cart items total price
     useEffect(() => {
       const total = cart.reduce((a, c) => {
-        const origPrice = c.attributes.price
+        const origPrice = c.price
         const discount = 20
         const discountPrice = origPrice - (origPrice * (discount / 100))
         return (
-          c.attributes.isSale ? 
+          c.isSale ? 
           a + discountPrice * c.amount : a + origPrice * c.amount
           )
       }, 0)
@@ -103,7 +103,7 @@ const CartProvider = ({children}) => {
       let total = 0;
     
       cart.forEach((item) => {
-        const itemTotalPrice = (item.attributes.isSale ? discountedPrice : origPrice);
+        const itemTotalPrice = (item.isSale ? discountedPrice : origPrice);
         total += itemTotalPrice || 0; 
       });
     
