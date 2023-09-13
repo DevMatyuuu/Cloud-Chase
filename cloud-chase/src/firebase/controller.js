@@ -9,4 +9,4 @@ export const prod = collection(db, "products")
 
 
 
-export const newProduct = query(prod, where ("isNew", "==", "true"))
+export const newProduct = query(prod, where ("isNew", "==", true))

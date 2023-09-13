@@ -26,13 +26,13 @@ const sliderImg = [
 
 function MainSlider() {
   return (
-    <Swiper modules={[Pagination, Autoplay]}  loop={true} autoplay={{delay: 2000}} pagination={{clickable:true,}} className='sm:max-h-[500px] md:rounded-xl sl:rounded-xl lg:rounded-xl sm:rounded-xl'>
+    <Swiper modules={[Pagination, Autoplay]}  loop={true} autoplay={{delay: 2000}} pagination={{clickable:true,}} className='lg:rounded-xl sl:rounded-xl sm:rounded-xl'>
      
         <>
             {sliderImg.map((slide, index) => {
             return (
             <SwiperSlide key={index}> 
-                <img src={slide.image}/> 
+                  <img src={slide.image} className='lg:h-[65vh] sm:h-[60vh] h-[30vh] w-full'/>
             </SwiperSlide>
             )})}
         </>

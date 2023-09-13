@@ -15,7 +15,7 @@ function Products() {
   console.log(selectedCategory)
 
   return (
-    <div className='mb-10 pt-0 lg:pb-[100px] sl:mb-60 sm:mb-24 sm:pt-0 font-poppins'>
+    <div className='h-[100vh] font-poppins'>
       <div className='container mx-auto'>
         <main>
           <motion.div

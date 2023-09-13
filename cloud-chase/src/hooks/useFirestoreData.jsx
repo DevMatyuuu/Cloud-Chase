@@ -5,6 +5,7 @@ import { categoryCollection, prod,  newProduct } from "../firebase/controller";
 function useFirestoreData() {
     const [categories, setCategories] = useState([]);
     const [product, setProduct] = useState([]);
+    const [newProd, setNewProd] = useState([]);
     const [latest, setLatest] = useState([]);
 
 
@@ -47,7 +48,7 @@ function useFirestoreData() {
   useEffect(
     () => {
     const unsubscribe = onSnapshot(newProduct, (snapshot) => {
-     setLatest( 
+     setNewProd( 
       snapshot.docs.map((doc) => {
         return {
           id: doc.id,
@@ -61,7 +62,7 @@ function useFirestoreData() {
     []
   );
   
-  return {categories, product, latest};
+  return {categories, product, newProd};
 }
 
 export default useFirestoreData

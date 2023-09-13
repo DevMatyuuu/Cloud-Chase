@@ -39,10 +39,10 @@ function RelatedSlider({data}) {
     
     >
         <>
-        {data.map(product => {
+        {data?.map(product => {
             return (
             <SwiperSlide key={product.id}>
-                <Product product={product}/>
+                <Product products={product}/>
             </SwiperSlide>
             )
         })}

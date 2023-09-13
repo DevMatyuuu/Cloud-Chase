@@ -9,6 +9,7 @@ import '../slider.css'
 
 
 function ProductSlider({latest}) {
+    
   return (
     <Swiper modules={[Pagination, Navigation]} loop={false} navigation={true}
     breakpoints={{
@@ -39,10 +40,10 @@ function ProductSlider({latest}) {
     
     >
         <>
-        {latest?.map(product => {
+        {latest.map(product => {
             return (
             <SwiperSlide key={product.id}>
-                <Product product={product}/>
+                <Product products={product}/>
             </SwiperSlide>
             )
         })}

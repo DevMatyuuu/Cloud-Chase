@@ -42,7 +42,7 @@ function SearchForm() {
           onChange={searchInput}
           type="text"
           placeholder="Search product here..."
-          className="input text-black rounded-lg md:h-[35px] sl:h-[35px] sm:h-[40px] h-[38px] sl:mt-6 sl:w-72 sl:mr-16 md:w-80 lg:w-80 w-[280px] sm:w-[500px] sm:max-w-[1000px] max-w-[400px] md:pl-3 sl:pl-3 sl:text-xs md:pb-0 md:mt-[2px] pl-3 text-sm"
+          className="input text-black rounded-lg lg::h-[35px] sl:h-[35px] sm:h-[40px] h-[38px] sl:mt-6 sl:w-72 sl:mr-16 md:w-80 lg:w-80 w-[280px] sm:w-[500px] sm:max-w-[1000px] max-w-[400px] md:pl-3 sl:pl-3 sl:text-xs md:pb-0 md:mt-[2px] pl-3 text-sm"
           value={searchTerm}
         />
       </div>

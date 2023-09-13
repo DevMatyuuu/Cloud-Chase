@@ -1,5 +1,4 @@
-import React, { useContext, useState, useEffect} from 'react'
-import RelatedProducts from '../components/RelatedProducts'
+import React, { useContext, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import useFirestoreData from '../hooks/useFirestoreData'
 import {Button} from '@material-tailwind/react'
@@ -8,6 +7,8 @@ import Modal from 'react-modal'
 import Lottie from 'lottie-react'
 import added from '../assets/added.json'
 import loading from '../assets/loading.json'
+import RelatedSlider from '../components/RelatedSlider'
+import RelatedProducts from '../components/RelatedProducts'
 
 
 function ProductDetails() {
@@ -18,6 +19,7 @@ function ProductDetails() {
   const paramsId = id;
   
   const selectedCategory = product.find(product => product.id === paramsId);
+;
   
     if (!selectedCategory) {
       return (
@@ -29,7 +31,6 @@ function ProductDetails() {
       )
     }
 
-  console.log(selectedCategory)
 
   const handleOpenModal = () => {
       setModalOpen(true);
@@ -67,6 +68,7 @@ function ProductDetails() {
   </div>
  </div>
 </div>
+<RelatedProducts category={selectedCategory}/>
     <Modal
         isOpen={modalOpen}
         onRequestClose={() => setModalOpen(false)}

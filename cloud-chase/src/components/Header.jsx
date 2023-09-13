@@ -33,14 +33,14 @@ function Header() {
       <nav className="bg-gradient-to-b from-gray-900 to-gray-600 p-4 ">
       <div className="container mx-auto flex items-center justify-between lg:w-[90%]">
         <div className="flex items-center space-x-4">
-          <span className="text-white">
+          <span className="text-white lg:flex hidden">
             <Note />
           </span>
         </div>
         <div>
-        <a href="/" className="text-white flex items-center space-x-2 flex-grow justify-center lg:ml-80">
+        <div className="text-white flex items-center space-x-2 flex-grow justify-center lg:ml-80">
           <img src={logo} alt="Your Logo" className="h-28 w-28" />
-        </a>
+        </div>
         </div>
         <div className="flex items-center space-x-4">
           <SearchForm />

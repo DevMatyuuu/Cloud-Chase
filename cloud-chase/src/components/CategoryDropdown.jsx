@@ -31,14 +31,15 @@ function CategoryDropdown() {
       >
         <ul className="col-span-4 flex w-full flex-col gap-3">
           {categories?.map((category) => (
-            <MenuItem key={category.id} className='hover:bg-slate-100/10 text-center rounded-lg mx-auto py-2 w-[9rem]'>
-              <Link
-                className="z-50 hover:after:absolute hover:after:block hover:after:h-[2px] hover:rounded-md  hover:after:transform hover:after:scale-x-0 hover:after:transition-transform hover:after:duration-200 hover:after:origin-left focus:scale-110 focus:after:absolute focus:after:block focus:after:h-[2px] focus:after:bg-black focus:after:transform focus:after:scale-x-0 focus:after:transition-transform focus:after:duration-300 focus:after:origin-left"
-                to={`/products/${category.id}`}
-              >
-                {category.title}
-              </Link>
-            </MenuItem>
+             <Link
+             key={category.id}
+             className="z-50 hover:after:absolute hover:after:block hover:after:h-[2px] hover:rounded-md  hover:after:transform hover:after:scale-x-0 hover:after:transition-transform hover:after:duration-200 hover:after:origin-left focus:scale-110 focus:after:absolute focus:after:block focus:after:h-[2px] focus:after:bg-black focus:after:transform focus:after:scale-x-0 focus:after:transition-transform focus:after:duration-300 focus:after:origin-left"
+             to={`/products/${category.id}`}
+           >
+              <MenuItem key={category.id} className='hover:bg-slate-100/10 text-center rounded-lg mx-auto py-2 w-[9rem]'>
+                  {category.title}
+              </MenuItem>
+            </Link>
           ))}
         </ul>
       </MenuList>

@@ -39,9 +39,6 @@ function Product({ products }) {
   const [showSkeleton, setShowSkeleton] = useState(true);
   const classes = useStyles();
   const {setIsOpen} = useContext(CartContext);
-  
-  
-
 
   useEffect(() => {
     const image = new Image();

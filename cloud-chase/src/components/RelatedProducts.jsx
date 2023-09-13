@@ -2,11 +2,12 @@ import React from 'react'
 import RelatedSlider from './RelatedSlider'
 import useFirestoreData from '../hooks/useFirestoreData'
 
-function RelatedProducts({categoryTitle}) {
+function RelatedProducts({category}) {
     const { product } = useFirestoreData();
 
-    const data = product.find(products => products.categories === categoryTitle);
+    const data = product.filter(product => product.categories === category.categories);
 
+    console.log(data)
   return (
     <div>
         <div className='container mx-auto justify-center'>
