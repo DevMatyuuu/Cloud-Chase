@@ -44,9 +44,15 @@ function Header() {
         </div>
         <div className="flex items-center space-x-4">
           <SearchForm />
-          <span className="text-white">
+          <span  onClick={() => setIsOpen(!isOpen)} className="text-white cursor-pointer">
             <SlBag size={36}/>
           </span>
+          <div onClick={() => setIsOpen(!isOpen)} className='absolute right-28 top-[75px] text-white cursor-pointer bg-black px-2  rounded-full'>{itemsAmount}</div>
+          <div
+            className={`${isOpen ? 'right-0' : '-right-full'}  bg-gradient-to-b from-gray-900 to-gray-600 rounded-left-2xl shadow-xl fixed top-0 bottom-0 w-full z-10 max-w-[500px] transition-all duration-300`}
+          >
+            <Cart />
+          </div>
         </div>
       </div>
     </nav>

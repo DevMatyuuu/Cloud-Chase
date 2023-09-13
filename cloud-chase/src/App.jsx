@@ -33,7 +33,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className='font-poppins'>
       <BrowserRouter>
         {loading ? (
           <>
@@ -136,7 +136,7 @@ function App() {
           </Routes>
         )}
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

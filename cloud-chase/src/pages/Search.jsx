@@ -21,8 +21,8 @@ function Search() {
   return (
     <div>
       <div className="container mx-auto md:mx-auto mt-10 md:mt-10 md:pb-[104px] pb-[265px]">
-        <span className="uppercase text-white font-bold md:text-3xl sl:text-2xl sm:text-xl text-md md:mt-0 md:ml-3 ml-9">
-          {data.length} Result for: "{searchTerm}"
+        <span className="uppercase text-white font-bold md:text-3xl sl:text-2xl sm:text-xl text-md ">
+          {data.length > 1 ? <div className='xl:ml-5'>{data.length} results for: "{searchTerm}"</div> : <div className='xl:ml-5'>{data.length} result for: "{searchTerm}"</div>} 
         </span>
         <div className='mx-auto flex md:gap-14'>
           {data && data.length > 0 ? (
