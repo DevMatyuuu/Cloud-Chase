@@ -12,15 +12,14 @@ function Products() {
   
   const selectedCategory = product.filter(product => product.categories === paramsId);
 
-
   return (
-    <div className='h-[100vh] font-poppins'>
+    <div className='h-[100vh] font-poppins lg:mx-16'>
       <div className='container mx-auto'>
         <main>
-          <div className='uppercase text-white font-bold xl:text-4xl sl:text-2xl sm:text-xl text-md xl:ml-7'>{paramsId}</div>
+          <div className='uppercase text-white font-bold xl:text-4xl lg:text-3xl sm:text-xl text-md xl:ml-10'>{paramsId}</div>
           {paramsId != 'all' ?
            selectedCategory.length > 0 ? (
-            <div className='grid lg:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 lg:gap-10 sl:gap-10 lg:h-auto lg:w-auto w-100 lg:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
+            <div className='grid xl:grid-cols-4 lg:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 lg:gap-10 sl:gap-10 lg:h-auto lg:w-auto w-100 lg:ml-0 ml-0 gap-7 xl:gap-0 gap-x-0 mt-10'>
               {selectedCategory.map((product) => (
                 <motion.div
                   key={product.id}
@@ -38,7 +37,7 @@ function Products() {
                 <Lottie animationData={loading}/>
                </div>
             </div> : product.length > 0 ? (
-            <div className='grid lg:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 lg:gap-10 sl:gap-10 lg:h-auto lg:w-auto w-100 lg:ml-0 ml-0 gap-7 gap-x-0 mt-10'>
+            <div className='grid lg:grid-cols-4 sl:grid-cols-3 sm:grid-cols-3 grid-cols-2 lg:gap-10 sl:gap-10 lg:h-auto lg:w-auto w-100 lg:ml-0 ml-0 gap-7 xl:gap-0 gap-x-0 mt-10'>
               {product.map((product) => (
                 <motion.div
                   key={product.id}
