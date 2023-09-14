@@ -36,7 +36,7 @@ function ProductSlider({latest}) {
     }} pagination={{
         clickable:true,
     }}
-    className='productSlider z-0 mx-auto xl:w-[100%] md:pb-10 sm:pb-16 pb-10 justify-center'
+    className='productSlider z-0 mx-auto xl:w-[100%] w-[60%] md:pb-10 sm:pb-16 pb-10 justify-center'
     >
         <>
         {latest.map(product => {
