@@ -11,7 +11,7 @@ function Hero() {
           <div className='lg:w-[100%] xl:w-[70%] h-full z-49'>
             <MainSlider className='z-49'/>
           </div>
-          <div className='flex xl:flex-col lg:flex-row flex-col md:flex-row sm:flex-row gap-y-[43px] sm:gap-x-10 sm:mt-10 mx-auto sm:h-[35vh] lg:h-[30vh] h-[500px]  bg-primary lg:m-auto sl:m-auto sm:m-auto jutify-center mt-5 lg:mt-0 sm:mt-0 '>
+          <div className='flex xl:flex-col lg:flex-row flex-col md:flex-row sm:flex-row gap-y-[43px] sm:gap-x-10 sm:mt-10 mx-auto sm:h-[35vh] lg:h-[30vh] h-[65vh]  bg-primary lg:m-auto sl:m-auto sm:m-auto jutify-center mt-5 lg:mt-0 sm:mt-0 '>
           {heroCards.map((item) => (
             <div className='mx-auto' key={item.id}>
               <div className='grad flex h-[30vh] mx-auto rounded-xl overflow-hidden p-6 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r text-white shadow-xl cursor-pointer'> 
