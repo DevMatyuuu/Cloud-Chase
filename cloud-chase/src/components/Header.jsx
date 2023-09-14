@@ -68,12 +68,17 @@ function Header() {
           <div>
             <img src={logo} className='h-20'/>
           </div>
-          <div onClick={() => setIsOpen(!isOpen)} className='text-white flex items-center'>
+          <div onClick={() => setIsOpen(!isOpen)}  className='text-white flex items-center cursor-pointer'>
             <SlBag size={28} />
-            <span className='absolute top-14 bg-black px-2 right-10 rounded-full'>
+            <span onClick={() => setIsOpen(!isOpen)} className='absolute top-14 bg-black px-2 right-10 rounded-full'>
               {itemsAmount}
             </span>
           </div>
+          <div
+              className={`${isOpen ? 'right-0' : '-right-full'}  bg-gradient-to-b from-gray-900 to-gray-600 rounded-left-2xl shadow-xl fixed top-0 bottom-0 w-full z-10 max-w-[500px] transition-all duration-300`}
+            >
+              <Cart />
+            </div>
         </div>
             <SearchForm />
       </nav>
