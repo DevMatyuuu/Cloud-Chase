@@ -32,7 +32,7 @@ function MainSlider() {
             {sliderImg.map((slide, index) => {
             return (
             <SwiperSlide key={index}> 
-                  <img src={slide.image} className='lg:h-[65vh] sm:h-[60vh] h-[30vh] w-full'/>
+                  <img src={slide.image} className='lg:h-[65vh] sm:h-[60vh] h-[30vh] w-full z-49'/>
             </SwiperSlide>
             )})}
         </>
