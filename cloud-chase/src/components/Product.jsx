@@ -59,7 +59,7 @@ function Product({ products }) {
 
   return (
     <Link to={`/product/${products.id}`}>
-      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-[60%] xl:w-[80%] md:h-[320px] md:w-[90%] max-w-[100%] sm:h-[290px]  h-[30vh] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
+      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-[80%] xl:w-[80%] md:h-[320px] md:w-[90%] max-w-[100%] sm:h-[290px]  h-[30vh] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
         {showSkeleton && (
           <div className={classes.root}>
             <Skeleton variant="rect" className={classes.image} />

@@ -26,7 +26,7 @@ const sliderImg = [
 
 function MainSlider() {
   return (
-    <Swiper modules={[Pagination, Autoplay]}  loop={true} autoplay={{delay: 2000}} pagination={{clickable:true,}} className='lg:rounded-xl sl:rounded-xl sm:rounded-xl'>
+    <Swiper modules={[Pagination, Autoplay]}  loop={true} autoplay={{delay: 2000}} pagination={{clickable:true,}} className='lg:rounded-xl sl:rounded-xl sm:rounded-xl z-49'>
      
         <>
             {sliderImg.map((slide, index) => {

@@ -5,11 +5,11 @@ import { heroCards } from '../../constant'
 
 function Hero() {
   return (
-    <section className='mx-auto lg:w-[90%] lg:mb-[100px] mb-14 lg:pt-0 sl:pt-[47px] pt-5 sm:pt-5 font-poppins'>
+    <section className='mx-auto lg:w-[90%] lg:mb-[100px] mb-14 lg:pt-0 sl:pt-[47px] pt-5 sm:pt-5 font-poppins z-49'>
      <div className='container mx-auto lg:max-w-[1480px]'>
         <div className='flex flex-col xl:flex-row md:flex-col lg:w-[100%] mx-auto gap-y-[20px] lg:flex-col lg:gap-x-[20px]'>
-          <div className='lg:w-[100%] xl:w-[70%] h-full'>
-            <MainSlider className='z-0'/>
+          <div className='lg:w-[100%] xl:w-[70%] h-full z-49'>
+            <MainSlider className='z-49'/>
           </div>
           <div className='flex xl:flex-col lg:flex-row flex-col md:flex-row sm:flex-row gap-y-[43px] sm:gap-x-10 sm:mt-10 mx-auto sm:h-[35vh] lg:h-[30vh] h-[500px]  bg-primary lg:m-auto sl:m-auto sm:m-auto jutify-center mt-5 lg:mt-0 sm:mt-0 '>
           {heroCards.map((item) => (
