@@ -58,6 +58,7 @@ function Header() {
           </div>
         </div>
       </nav>
+
     {/* mobile navbar */}
       <nav className='lg:hidden xl:hidden bg-gradient-to-b from-gray-900 to-gray-600 p-4'>
         <div className="container mx-auto flex items-center justify-between w-[90%]">
@@ -81,7 +82,7 @@ function Header() {
               isOpen={openModal}
               contentLabel="Modal"
               className='lg:hidden xl:hidden modal z-50 fixed inset-0 flex items-center justify-center bg-transparent'
-              overlayClassName="lg:hidden xl:hidden modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+              overlayClassName="lg:hidden xl:hidden modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                 <div data-aos='fade-in' data-aos-duration='500' className='mx-auto bg-slate-800/80 backdrop-blur-xl h-[400px] w-[350px] rounded-lg font-poppins shadow-lg'>
                   <IoClose size={20} onClick={modalClose} className=' text-white text-center mt-5 mr-5 float-right cursor-pointer'/>
                   <div className='justify-center text-center text-white grid-col-1 mt-12 text-xl'>
