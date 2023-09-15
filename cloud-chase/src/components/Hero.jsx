@@ -22,7 +22,7 @@ function Hero() {
                     <p className='text-sm font-bold max-w-[100px] text-black px-2 py-2 bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 rounded-xl text-center uppercase lg:ml-1'>shop now</p>
                   </div>
                   <div>
-                    <img src={item.image} className={`${item.id === 2 ? 'lg:left-40 sm:left-20 left-24' : 'lg:left-48 sm:left-20 left-32'} lg:h-80 h-60 sm:h-[350px] lg:top-12 sm:top-9 top-12 absolute`} />
+                    <img src={item.image} className={`${item.id === 2 ? 'lg:left-40 sm:left-20 left-24' : 'lg:left-48 sm:left-20 left-32'} lg:h-80 h-60 sm:h-[350px] lg:top-12 sm:top-9 top-20 absolute`} />
                   </div>
                 </div>
               </Link> 

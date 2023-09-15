@@ -35,14 +35,16 @@ function RelatedSlider({data}) {
     }} pagination={{
         clickable:true,
     }}
-    className='productSlider mx-auto xl:w-[120%] md:pb-10 sm:pb-16 pb-10 justify-center'
+    className='productSlider mx-auto md:pb-10 sm:pb-16 pb-10 justify-center'
     
     >
         <>
         {data?.map(product => {
             return (
             <SwiperSlide key={product.id}>
-                <Product products={product}/>
+                <div className='w-60 lg:w-[120%] mx-auto first-letter:uppercase'>
+                    <Product products={product}/>
+                </div>
             </SwiperSlide>
             )
         })}
