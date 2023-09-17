@@ -17,6 +17,7 @@
     "@material-ui/lab": "^4.0.0-alpha.61",
     "@mui/base": "^5.0.0-beta.4",
     "@mui/material": "^5.13.5",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "aos": "^2.3.4",
     "axios": "^1.4.0",
     "firebase": "^10.3.1",

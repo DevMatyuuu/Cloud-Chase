@@ -20,7 +20,7 @@ function Cart() {
   console.log(cart)
   return (
     <>
-      <div className={`lg:w-full flex-col justify-center md:h-[650px] sl:h-[650px] h-[500px] ${isCartEmpty ? 'h-[700px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
+      <div className={`lg:w-full flex-col justify-center md:h-[75vh] h-[500px] ${isCartEmpty ? 'h-[800px] overflow-y-hidden' : 'h-auto'} max-h-full px-4 shadow-left-2xl rounded-xl`}>
         <div className='flex-row'>
           <SlClose
             onClick={() => setIsOpen(false)}
@@ -40,7 +40,7 @@ function Cart() {
               </span>
             </div>
           ) : (
-            <div className='flex flex-col justify-center text-white lg:h-[560px] sl:h-560px] h-[500px] lg:pt-16 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
+            <div className='flex flex-col justify-center text-white lg:h-[66vh] sl:h-560px] h-[500px] lg:pt-80 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
               {cart.map((item) => (
                 <div key={item.id}>
                   <CartItem item={item} />

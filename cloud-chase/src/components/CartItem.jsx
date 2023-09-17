@@ -44,8 +44,8 @@ function CartItem({ item }) {
   const discPrice = item.price - (item.price * (20 / 100)) 
 
   return (
-    <div className='flex mx-auto lg:pt-10 lg:pb-5 sl:mt-12 sl:pb-5 sl:pt-10 rounded-xl justify-center lg:w-[90%] lg:gap-5 gap-8 sl:gap-5  bg-slate-700 font-poppins lg:max-w-[430px] sl:max-w-[380px] mb-10 pt-7'>
-      <Link to={`/product/${item.id}`} className='w-[120px] h-[20vh] sl:w-[300px]'>
+    <div className='flex mx-auto lg:pt-10 lg:pb-5  rounded-xl justify-center lg:w-[90%] lg:gap-5 gap-8 sl:gap-5  bg-slate-700 font-poppins lg:max-w-[430px] sl:max-w-[380px] mb-10 pt-7'>
+      <Link to={`/product/${item.id}`} className='w-[120px] h-[20vh]'>
         <img src={item.image} onClick={() => setIsOpen(false)} />
       </Link>
       <div>

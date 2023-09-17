@@ -7,7 +7,6 @@ import Modal from 'react-modal'
 import Lottie from 'lottie-react'
 import added from '../assets/added.json'
 import loading from '../assets/loading.json'
-import RelatedSlider from '../components/RelatedSlider'
 import RelatedProducts from '../components/RelatedProducts'
 
 
@@ -17,10 +16,11 @@ function ProductDetails() {
   const {addToCart} = useContext(CartContext)
   const { id } = useParams();
   const paramsId = id;
+  const [showFullDescription, setShowFullDescription] = useState(true);
   
   const selectedCategory = product.find(product => product.id === paramsId);
 ;
-  
+  console.log(selectedCategory)
     if (!selectedCategory) {
       return (
         <div className="text-white mx-auto md:w-36 md:font-bold md:text-2xl md:mt-36  mt-32 w-32 pb-[180px] md:pb-[252px] justify-center">
@@ -45,11 +45,11 @@ function ProductDetails() {
 
   
   return (
-    <div className='md:mb-10  pt-7 sm:pt-[10px] sl:pt-8 md:mt-16 md:pt-0 font-poppins'>
-      <div className='w-[90%] mx-auto pt-8 lg:pt-0 bg-gradient-to-b from-gray-900 to-gray-600 rounded-xl mb-5'>
-        <div className='flex flex-col h-[60vh] lg:justify-center sm:h-[50vh]'>
-          <div className='lg:flex mx-20'>
-            <div className='flex justify-center  mb-2 xl:w-[80%] lg:w-[900px]'>
+    <div className='md:mb-10  pt-7 sm:pt-[10px] md:mt-16 md:pt-0 font-poppins'>
+      <div className='w-[90%] mx-auto pt-5 lg:pt-0 bg-gradient-to-b from-gray-900 to-gray-600 rounded-xl mb-5'>
+        <div className='flex flex-col h-auto pb-10 lg:justify-center sm:h-auto'>
+          <div className={`lg:flex ${selectedCategory.categories === 'pods' ? 'xl:mx-20 mx-8' : 'xl:mx-20'} lg:py-28`}>
+            <div className={`${selectedCategory.categories === 'pods' ? 'lg:w-[300%]' : 'lg:w-[80%]'} flex justify-center  mb-2 lg:w-[900px]`}>
               <img src={selectedCategory.image} className='h-32  xl:h-[30vh] lg:h-[30vh]'/>
             </div>
             <div>
@@ -59,11 +59,25 @@ function ProductDetails() {
               <div className='flex justify-center lg:justify-start text-white text-sm lg:text-lg xl:text-2xl font-bold lg:pl-8'>
                 <span className='first-letter:uppercase'>{selectedCategory.title}</span>
               </div>
-              <div className='mx-auto lg:mx-0 text-justify lg:justify-start text-white text-xs lg:text-sm xl:text-base w-[70%] lg:w-full xl:w-[85%] mt-5 xl:mt-7 lg:mt-2 lg:pl-8'>
-                <p>{selectedCategory.description}</p>
+              <div className='mx-auto lg:mx-0 text-justify lg:justify-start text-white text-[8px] lg:text-sm xl:text-base lg:w-full mt-5 xl:mt-7 lg:mt-2 lg:pl-8 pb-5 lg:pb-0'>
+                  {selectedCategory.categories !== 'disposable' ? (
+                    showFullDescription ? (
+                      <div className='xl:w-[80%]'>
+                        <p className='line-clamp-4'>{selectedCategory.description}</p>
+                        <span className='float-right cursor-pointer mt-1 hover:text-violet-400' onClick={() => setShowFullDescription(false)}>Read more</span>
+                      </div>
+                    ) : (
+                      <div className='xl:w-[80%]'>
+                        <p className='line-clamp-none'>{selectedCategory.description}</p>
+                        <span className='float-right cursor-pointer hover:text-violet-400' onClick={() => setShowFullDescription(true)}>Read less</span>
+                      </div>
+                    )
+                  ) : (
+                    <p className='xl:w-[85%] w-[100%]'>{selectedCategory.description}</p>
+                  )}
               </div>
-              <div className='flex justify-center lg:justify-start text-white text-xs lg:text-sm xl:text-base w-[70%] xl:w-[50%] mx-auto lg:mx-0 mt-5 lg:mt-10 lg:pl-8'>
-                <div className='flex-col mr-14 font-bold w-[50%]'>
+              <div className='flex justify-center items-center lg:justify-start text-white text-xs lg:text-sm xl:text-base w-[70%] xl:w-[50%] mx-auto lg:mx-0 mt-5 lg:mt-10 lg:pl-8'>
+                <div className={`flex-col mr-14 font-bold ${selectedCategory.categories === 'pods' ?  'w-[10%]' : 'w-[70%]'}`}>
                   <span className='text-violet-300'>
                     ₱{discountedPrice}
                   </span>
@@ -71,8 +85,8 @@ function ProductDetails() {
                     {selectedCategory.isSale ? <span className='text-slate-300'>Original Price: ₱{origPrice}</span> : <span></span>}
                 </div>
                 </div>
-                <div className='flex justify-center w-[40%]'>
-                <Button onClick={() => {addToCart(selectedCategory, paramsId); handleOpenModal();}} className='px-2 py-1 bg-black text-white text-xs'>Add to Cart</Button>
+                <div className='flex justify-center lg:w-[40%] w-[60%]'>
+                <Button onClick={() => {addToCart(selectedCategory, paramsId); handleOpenModal();}} className='lg:px-2 lg:py-4 py-2 px-0  bg-black text-white text-[8px] lg:text-sm w-[500px]'>Add to Cart</Button>
                 </div>
               </div>
             </div>
