@@ -7,6 +7,7 @@ import empty from '../assets/empty-cart.json';
 import { Button } from '@material-tailwind/react';
 import { IoArrowForward } from 'react-icons/io5';
 
+
 function Cart() {
   const { setIsOpen, cart, total, clearCart } = useContext(CartContext);
   const isCartEmpty = cart.length === 0;
@@ -34,13 +35,13 @@ function Cart() {
                 animationData={empty}
                 className='flex md:top-[230px] md:left-[171px] sl:left-[171px] lg:left-[171px] mx-auto sl:top-[230px] lg:top-[230px] h-40 w-40 overflow-y-hidden'
               />
-              cart is empty
+                cart is empty
               <span className='grid text-xs md:mt-5 sl:mt-5 mt-4 overflow-y-hidden'>
                 You can check our products and click add to cart. Thank you!
               </span>
             </div>
           ) : (
-            <div className='flex flex-col justify-center text-white lg:h-[66vh] sl:h-560px] h-[500px] lg:pt-80 sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
+            <div className='flex flex-col  text-white lg:h-[65vh] sl:h-560px] h-[500px]  sl:mt-0 mt-10 overflow-y-auto overflow-x-hidden'>
               {cart.map((item) => (
                 <div key={item.id}>
                   <CartItem item={item} />

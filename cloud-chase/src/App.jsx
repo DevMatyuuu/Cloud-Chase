@@ -11,6 +11,7 @@ import ContactUs from './pages/ContactUs';
 import AgeVerification from './pages/AgeVerification';
 import reload from './assets/reload.json'
 import Lottie from 'lottie-react'
+import './scrollbar.css'
 
 function App() {
   const [loading, setLoading] = useState(true);
