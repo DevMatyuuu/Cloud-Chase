@@ -42,7 +42,7 @@ function RelatedSlider({data}) {
         {data?.map(product => {
             return (
             <SwiperSlide key={product.id}>
-                <div className='w-60 lg:w-[120%] mx-auto first-letter:uppercase'>
+                <div className='w-60 xl:w-[120%] mx-auto first-letter:uppercase'>
                     <Product products={product}/>
                 </div>
             </SwiperSlide>

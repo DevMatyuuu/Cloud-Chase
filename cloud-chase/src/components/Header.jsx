@@ -70,7 +70,7 @@ function Header() {
           </div>
           <div onClick={() => setIsOpen(!isOpen)}  className='text-white flex items-center cursor-pointer'>
             <SlBag size={28} />
-            <span onClick={() => setIsOpen(!isOpen)} className='absolute top-14 bg-black px-2 right-10 rounded-full'>
+            <span onClick={() => setIsOpen(!isOpen)} className='absolute top-14 bg-black px-2 lg:right-10 md:right-16 rounded-full'>
               {itemsAmount}
             </span>
           </div>
