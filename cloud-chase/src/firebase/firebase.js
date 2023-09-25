@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyATosUJ7UsCIwgl2Js2bcBVaI1XrKJEeIE",
-  authDomain: "cloud-chase-be84a.firebaseapp.com",
-  projectId: "cloud-chase-be84a",
-  storageBucket: "cloud-chase-be84a.appspot.com",
-  messagingSenderId: "466641000715",
-  appId: "1:466641000715:web:2e0032e740bdde5a25aa0e"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
