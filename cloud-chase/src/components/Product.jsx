@@ -59,7 +59,7 @@ function Product({ products }) {
 
   return (
     <Link to={`/product/${products.id}`}>
-      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-[80%] lg:w-[100%] xl:w-[80%] md:h-[320px] md:w-[90%] max-w-[100%] sm:h-[290px]  h-[27vh] rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
+      <div className="grad bg-gradient-to-b from-gray-900 to-gray-600 w-[80%] lg:w-[100%] xl:w-[80%] md:h-[320px] md:w-[90%] max-w-[100%] sm:h-auto  h-auto rounded-[8px] overflow-hidden relative group mx-auto justify-center shadow-xl">
         {showSkeleton && (
           <div className={classes.root}>
             <Skeleton variant="rect" className={classes.image} />
@@ -78,12 +78,12 @@ function Product({ products }) {
                 New
               </div>
             )}
-            <div className="md:w-full md:h-[180px] sm:w-[full] sm:h-[180px] flex items-center justify-center md:mt-0 sl:mt-5 sm:mt-0 mt-1">
+            <div className="md:w-full md:h-[180px] sm:w-[full] sm:h-[150px] flex items-center justify-center md:mt-0 sl:mt-5 sm:mt-0 mt-1">
               {imageLoaded ? (
                 <img
                   onClick={() => setIsOpen(false)}
                   src={products.image}
-                  className="sm:w-[120px] md:h-[120px] xl:w-[150px] sm:h-[100px] h-[80px] sl:h-20 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all "
+                  className="sm:w-[120px] md:h-24 xl:w-[150px] lg:h-24 sm:h-[100px] h-[80px] xl:h-28 w-28 sl:mb-0 md:mt-5 sm:mt-0 sl:mt-5 mt-8 group-hover:scale-105 transition-all "
                   alt={products.title}
                 />
               ) : (
@@ -102,24 +102,24 @@ function Product({ products }) {
                 <div className="md:text-sm text-[10px] xl:text-xs sm:text-xs lg:text-xs md:ml-0 ml-2 font-bold uppercase">
                   {products.title.substring(0, 35)}
                 </div>
-                  {products.isSale && (
-                    <div className="absolute text-slate-200 md:text-[10px] xl:text-xs lg:text-[10px] sm:text-xs text-[8px] font-bold uppercase xl:left-36 sm:left-16 left-20 md:bottom-[27px]  md:left-24 lg:left-16 bottom-4 px-2 rounded-lg">
-                      Original price: ₱{origPrice}
-                    </div>
-                )}
-                <div className="font-semibold">
+                <div className='flex mt-5 xl:mt-10'>
                   {products.isSale ? (
-                    <div className="absolute text-violet-300 md:text-[11px] xl:text-base sm:text-sm lg:text-xs text-[10px] font-bold uppercase md:left-5 left-2 md:bottom-6 sl:bottom-4 sl:ml-3 bottom-5 px-2 rounded-lg">
+                    <div className=" text-violet-300 md:text-[11px] xl:text-base sm:text-xs lg:text-xs text-[9px] font-bold uppercase px-2 sm:px-0 rounded-lg">
                       ₱{discountedPrice}
                     </div>
                     ) : (
-                    <div className="absolute text-violet-300 md:text-[11px]  lg:text-sm sm:text-sm text-[13px] font-bold uppercase sl:left-6 sl:bottom-4 md:left-5 left-2 md:bottom-6 bottom-3 px-2 rounded-lg">
+                    <div className=" text-violet-300 md:text-[11px]  lg:text-sm sm:text-xs text-[13px] font-bold uppercase px-2 sm:px-0  rounded-lg">
                       ₱{origPrice}
                     </div>
                   )}
+                   {products.isSale && (
+                    <div className="text-slate-200 md:text-[10px] xl:pt-[2px] xl:text-sm xl:ml-14 lg:text-[10px] sm:text-[10px] text-[9px] font-bold uppercase sm:ml-4 px-2 sm:px-0  rounded-lg">
+                      Original price: ₱{origPrice}
+                    </div>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
           </>
         )}
       </div>

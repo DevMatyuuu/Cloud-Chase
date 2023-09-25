@@ -68,9 +68,9 @@ function Header() {
           <div>
             <img src={logo} className='h-20'/>
           </div>
-          <div onClick={() => setIsOpen(!isOpen)}  className='text-white flex items-center cursor-pointer'>
+          <div onClick={() => setIsOpen(!isOpen)}  className='text-white flex items-center cursor-pointer relative'>
             <SlBag size={28} />
-            <span onClick={() => setIsOpen(!isOpen)} className='absolute top-14 bg-black px-2 lg:right-10 md:right-16 rounded-full'>
+            <span onClick={() => setIsOpen(!isOpen)} className='absolute bg-black px-2 right-2 top-4 rounded-full'>
               {itemsAmount}
             </span>
           </div>

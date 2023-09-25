@@ -72,7 +72,7 @@ function ProductDetails() {
                       </div>
                     )
                   ) : (
-                    <p className='xl:w-[85%] lg:w-[70%] w-[70%] mx-auto'>{selectedProduct.description}</p>
+                    <p className='xl:w-[85%] lg:w-[70%] w-[70%] mx-auto xl:mx-0'>{selectedProduct.description}</p>
                   )}
               </div>
               <div className='flex justify-center items-center xl:justify-start  text-white text-xs lg:text-sm xl:text-base w-[70%] xl:w-[50%] mx-auto xl:mx-0 mt-5 lg:mt-10 xl:pl-8'>
@@ -81,7 +81,7 @@ function ProductDetails() {
                     ₱{discountedPrice}
                   </span>
                   <div>
-                    {selectedProduct.isSale ? <span className='text-slate-300 text-[10px]'>Original Price: ₱{origPrice}</span> : <span></span>}
+                    {selectedProduct.isSale ? <span className='text-slate-300 text-[10px] xl:text-sm'>Original Price: ₱{origPrice}</span> : <span></span>}
                 </div>
                 </div>
                 <div className='flex justify-center lg:w-[40%] w-[60%]'>

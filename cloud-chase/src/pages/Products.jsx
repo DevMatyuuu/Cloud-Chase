@@ -16,7 +16,7 @@ function Products() {
     <div className='h-[100vh] font-poppins lg:mx-16'>
       <div className='container mx-auto'>
         <main>
-          <div className='uppercase text-white font-bold xl:text-4xl lg:text-3xl sm:text-xl text-2xl xl:ml-10 ml-5 lg:ml-0 mt-5 xl:mt-0 lg:mt-0 sm:mt-0 md:mt-0'>{paramsId}</div>
+          <div className='uppercase text-white font-bold xl:text-4xl lg:text-3xl sm:text-xl text-2xl xl:ml-10 ml-5 lg:ml-0 mt-5 xl:mt-0 lg:mt-0 sm:mt-5 md:mt-0'>{paramsId}</div>
           {paramsId != 'all' ?
            selectedCategory.length > 0 ? (
             <div className='grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-2  lg:gap-5 lg:h-auto lg:w-auto w-100 lg:ml-0 ml-0 xl:gap-0 gap-y-7 gap-x-0 mt-10'>
